@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "535546781585",
+    "firebase_url": "https://recetario-79536.firebaseio.com",
+    "project_id": "recetario-79536",
+    "storage_bucket": "recetario-79536.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535546781585:android:2e6eaa59409bb98c220430",
+        "android_client_info": {
+          "package_name": "com.browith.Recetario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535546781585-p61abor1ps218vr16t39168f4r0btfjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8NC8bQVk4PCxZuALyJ8ptwg6eCgWYZYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535546781585-p61abor1ps218vr16t39168f4r0btfjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
