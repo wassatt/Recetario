@@ -76,7 +76,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Usuario
+  m_Text: Nombre
 --- !u!1 &519829296505095742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,13 +1265,14 @@ GameObject:
   - component: {fileID: 3755639624645323167}
   - component: {fileID: 6838315844554920593}
   - component: {fileID: 6630116450542734440}
+  - component: {fileID: 956787758}
   m_Layer: 5
   m_Name: pfb_panel_Signin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3120674792764033486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1350,6 +1351,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
+--- !u!114 &956787758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201602831725090336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be6a8ac427eb734188fa7cfb25e12e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userMail: {fileID: 6630116451452828667}
+  userPassword: {fileID: 6630116451070748459}
+  userName: {fileID: 6630116449944960662}
+  signinMail: {fileID: 11400000, guid: 255b53506698aa64ca472106eae708e0, type: 2}
+  signinPass: {fileID: 11400000, guid: b42c7010a73c71448b3d56d6b18ae340, type: 2}
+  signinName: {fileID: 11400000, guid: 11625f931248aeb4db09641ccd364986, type: 2}
+  registerButton: {fileID: 1265903120990728628}
 --- !u!1 &6630116449944960656
 GameObject:
   m_ObjectHideFlags: 0
