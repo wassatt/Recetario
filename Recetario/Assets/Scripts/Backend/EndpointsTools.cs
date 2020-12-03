@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
 
 public class EndpointsTools : MonoBehaviour
 {
@@ -27,27 +25,7 @@ public class EndpointsTools : MonoBehaviour
         }
     }
 
-    public IEnumerator GetWithParam(string url, string param, string accessToken)
-    {
-        url = url + "/" + param;
-        UnityWebRequest www = UnityWebRequest.Get(url);
-        //www.SetRequestHeader("Authorization", authorization);
-        //www.SetRequestHeader("Authorization", "TOKEN " + accessToken);
-
-        yield return www.SendWebRequest();
-
-        if (www.isNetworkError || www.isHttpError)
-        {
-            Debug.Log(www.error);
-        }
-        else
-        {
-            Debug.Log(www.downloadHandler.text);
-        }
-    }
-
-
-    public IEnumerator PatchWithParam(string url, string param, string jsonData)
+    public IEnumerator PatchWithParam(string url, string param, string jsonData, System.Action<string> callback)
     {
 
         url = url + "/" + param;
@@ -65,15 +43,16 @@ public class EndpointsTools : MonoBehaviour
 
         if (www.isNetworkError || www.isHttpError)
         {
-            Debug.Log(www.error);
+            callback(www.error);
         }
         else
         {
-            Debug.Log(www.downloadHandler.text);
+            yield return null;
+            callback(www.downloadHandler.text);
         }
     }
 
-    public IEnumerator PostWithParam(string url, string param, string jsonData)
+    public IEnumerator PostJsonWithParam(string url, string param, string jsonData, System.Action<string> callback)
     {
 
         url = url + "/" + param;
@@ -90,21 +69,22 @@ public class EndpointsTools : MonoBehaviour
 
         if (www.isNetworkError || www.isHttpError)
         {
-            Debug.Log(www.error);
+            callback(www.error);
         }
         else
         {
-            Debug.Log(www.downloadHandler.text);
+            yield return null;
+            callback(www.downloadHandler.text);
         }
     }
 
-    public IEnumerator PostWithParam(string url, string param, byte[] file)
+    public IEnumerator PostFileWithParam(string url, string param, byte[] file, System.Action<string> callback)
     {
         url = url + "/" + param;
         var request = new UnityWebRequestAsyncOperation();
 
         List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
-        formData.Add(new MultipartFormFileSection("picture", file, "image.jpg", "img"));
+        formData.Add(new MultipartFormFileSection("picture", file, "image.jpg", "image/jpeg"));
         UnityWebRequest www = UnityWebRequest.Post(url, formData);
         request = www.SendWebRequest();
 
@@ -112,11 +92,35 @@ public class EndpointsTools : MonoBehaviour
 
         if (www.isNetworkError || www.isHttpError)
         {
-            Debug.Log(www.error);
+            callback(www.error);
         }
         else
         {
-            //Debug.Log(www.downloadHandler.text);
+            yield return null;
+            callback(www.downloadHandler.text);
+        }
+    }
+
+    public IEnumerator DeleteWithParam(string url, string param, System.Action<string> callback)
+    {
+        url = url + "/" + param;
+
+        var request = new UnityWebRequestAsyncOperation();
+
+        UnityWebRequest www = UnityWebRequest.Get(url);
+        www.method = "DELETE";
+
+        request = www.SendWebRequest();
+        yield return new WaitUntil(() => request.isDone);
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            callback(www.error);
+        }
+        else
+        {
+            yield return null;
+            callback(www.downloadHandler.text);
         }
     }
 

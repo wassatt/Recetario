@@ -3,27 +3,27 @@
 [SerializeField]
 public class UserData
 {
-    public bool isRestaurant;
-    public int category;
+    public string id;
     public string profileImageUrl;
     public string name;
-    public string phoneNumber;
-    public string businessAddress;
-    public string schedule;
-    public string menuId;
 
     public UserData() { }
 }
 
 
 [SerializeField]
-public class Menu
+public class Recipe
 {
+    public string id;
     public string imageUrl;
     public string name;
-    public Entry[] entries;
+    public string description;
+    public string prepTime;
+    public int category;
+    public int likes;
+    public int difficulty;
 
-    public Menu() { }
+    public Recipe() { }
 }
 
 [SerializeField]

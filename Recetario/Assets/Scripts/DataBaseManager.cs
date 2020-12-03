@@ -113,7 +113,7 @@ public class DataBaseManager : MonoBehaviour
         userData.isRestaurant = isRestaurant;
         string json = JsonUtility.ToJson(userData);
 
-        StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateAccountType, userId, json));
+        //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateAccountType, userId, json));
     }
 
     public void UpdateUserName(string userName)
@@ -124,7 +124,7 @@ public class DataBaseManager : MonoBehaviour
         userData.name = userName;
         string json = JsonUtility.ToJson(userData);
 
-        StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateUserName, userId, json));
+        //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateUserName, userId, json));
     }
 
     public void UpdatePhone(string phoneNumber)
@@ -135,7 +135,7 @@ public class DataBaseManager : MonoBehaviour
         userData.phoneNumber = phoneNumber;
         string json = JsonUtility.ToJson(userData);
 
-        StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdatePhoneNumber, userId, json));
+        //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdatePhoneNumber, userId, json));
     }
 
     public void UpdateBusinessAddress(string businessAddress)
@@ -146,7 +146,7 @@ public class DataBaseManager : MonoBehaviour
         userData.businessAddress = businessAddress;
         string json = JsonUtility.ToJson(userData);
 
-        StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateBusinessAddress, userId, json));
+        //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateBusinessAddress, userId, json));
     }
 
     public void UpdateSchedule(string schedule)
@@ -157,7 +157,7 @@ public class DataBaseManager : MonoBehaviour
         userData.schedule = schedule;
         string json = JsonUtility.ToJson(userData);
 
-        StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateSchedule, userId, json));
+        //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateSchedule, userId, json));
     }
 
     public void UpdateCategory(int category)
@@ -168,7 +168,7 @@ public class DataBaseManager : MonoBehaviour
         userData.category = category;
         string json = JsonUtility.ToJson(userData);
 
-        StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateCategory, userId, json));
+        //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateCategory, userId, json));
     }
 
     public void PostNewUserData()
@@ -179,134 +179,21 @@ public class DataBaseManager : MonoBehaviour
         userData.name = AuthManager.currentUserName;
         string json = JsonUtility.ToJson(userData);
 
-        StartCoroutine(endpointsTools.PostWithParam(API.urlPostNewUser, userId, json));
+        //StartCoroutine(endpointsTools.PostWithParam(API.urlPostNewUser, userId, json));
     }
 
     public void UploadProfileImage(string path)
     {
         string userId = AuthManager.currentUserId;
         var bytes = System.IO.File.ReadAllBytes(path);
-        StartCoroutine(endpointsTools.PostWithParam(API.urlPostUserProfileImage, userId, bytes));
+        //StartCoroutine(endpointsTools.PostWithParam(API.urlPostUserProfileImage, userId, bytes));
     }
 
     public void UploadProfileImage(ScriptableString imagePath)
     {
         string userId = AuthManager.currentUserId;
         var bytes = System.IO.File.ReadAllBytes(imagePath.Get());
-        StartCoroutine(endpointsTools.PostWithParam(API.urlPostUserProfileImage, userId, bytes));
+        //StartCoroutine(endpointsTools.PostWithParam(API.urlPostUserProfileImage, userId, bytes));
     }
 
-    //deprecated
-    public IEnumerator CoroutineGetUserDataValues(bool restartScene)
-    {
-        var getTask = FirebaseDatabase.DefaultInstance.GetReference("users/" + AuthManager.currentUserId).GetValueAsync();
-        yield return new WaitUntil(() => getTask.IsCompleted);
-
-        if (getTask.Exception != null)
-        {
-            onConnectionError.Invoke();
-        }
-        else
-        {
-            DataSnapshot snapshot = getTask.Result;
-            var json = snapshot.GetRawJsonValue();
-            if (!string.IsNullOrEmpty(json))
-            {
-                //TODO: models writer
-                UserData userData = JsonUtility.FromJson<UserData>(json);
-                isRestaurant.Set(userData.isRestaurant);
-                ssPhoneNumber.Set(userData.phoneNumber);
-                ssBussinessAddress.Set(userData.businessAddress);
-                ssSchedule.Set(userData.schedule);
-                siCategory.Set(userData.category);
-                onDataRetreived.Invoke();
-                if (restartScene)
-                {
-                    //Destroy(GameObject.Find("Firebase Services"));
-                    SceneManager.LoadScene(0);
-                }
-            }
-        }
-    }
-    //deprecated
-    public IEnumerator CoroutineCreateOrUpdateUserData(UserData userData)
-    {
-        var getTask = FirebaseDatabase.DefaultInstance.GetReference("users/" + AuthManager.currentUserId).GetValueAsync();
-        yield return new WaitUntil(() => getTask.IsCompleted);
-
-        if (getTask.Exception != null)
-        {
-            onConnectionError.Invoke();
-        }
-        else
-        {
-            DataSnapshot snapshot = getTask.Result;
-            var json = snapshot.GetRawJsonValue();
-            if (!string.IsNullOrEmpty(json))
-            {
-                //Debug.Log("user exists, updating changes...");
-                var tempUserData = JsonUtility.FromJson<UserData>(json);
-                if (!userData.isRestaurant.Equals(tempUserData.isRestaurant))
-                    StartCoroutine(CoroutineUpdateUserDataField("isRestaurant", userData.isRestaurant));
-                if (!userData.phoneNumber.Equals(tempUserData.phoneNumber))
-                    StartCoroutine(CoroutineUpdateUserDataField("phoneNumber", userData.phoneNumber));
-                if (!userData.phoneNumber.Equals(tempUserData.phoneNumber))
-                    StartCoroutine(CoroutineUpdateUserDataField("businessAddress", userData.businessAddress));
-            }
-            else
-            {
-                //Debug.Log("no user, creating new user in db...");
-                StartCoroutine(CoroutineUploadUserData(userData));
-            }
-        }
-    }
-    //deprecated
-    IEnumerator CoroutineUploadUserData(UserData userData)
-    {
-        string json = JsonUtility.ToJson(userData);
-        var SendDBTask = reference.Child("users").Child(AuthManager.currentUserId).SetRawJsonValueAsync(json);
-        yield return new WaitUntil(() => SendDBTask.IsCompleted);
-
-        if (SendDBTask.Exception != null)
-        {
-            onConnectionError.Invoke();
-        }
-        else
-        {
-            onDataSent.Invoke();
-            StartCoroutine(CoroutineGetUserDataValues(false));
-        }
-    }
-    //deprecated
-    public IEnumerator CoroutineUpdateUserDataField(string field, string value)
-    {
-        var SendDBTask = reference.Child("users").Child(AuthManager.currentUserId).Child(field).SetValueAsync(value);
-        yield return new WaitUntil(() => SendDBTask.IsCompleted);
-
-        if (SendDBTask.Exception != null)
-        {
-            onConnectionError.Invoke();
-        }
-        else
-        {
-            onDataSent.Invoke();
-            StartCoroutine(CoroutineGetUserDataValues(false));
-        }
-    }
-    //deprecated
-    public IEnumerator CoroutineUpdateUserDataField(string field, bool value)
-    {
-        var SendDBTask = reference.Child("users").Child(AuthManager.currentUserId).Child(field).SetValueAsync(value);
-        yield return new WaitUntil(() => SendDBTask.IsCompleted);
-
-        if (SendDBTask.Exception != null)
-        {
-            onConnectionError.Invoke();
-        }
-        else
-        {
-            onDataSent.Invoke();
-            StartCoroutine(CoroutineGetUserDataValues(false));
-        }
-    }
 }
