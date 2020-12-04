@@ -1,18 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-[SerializeField]
+[Serializable]
 public class UserData
 {
     public string id;
     public string imageUrl;
     public string name;
+    public List<Favorite> favorites;
+    public List<CartItem> cart;
 
     public UserData() { }
 }
 
-
-[SerializeField]
+[Serializable]
 public class Recipe
 {
     public string id;
@@ -24,28 +26,49 @@ public class Recipe
     public int difficulty;
     public int likes;
     public List<Ingredient> ingredients;
+    public List<Instruction> instructions;
 
     public Recipe() { }
 }
 
-[SerializeField]
+[Serializable]
 public class Ingredient
 {
     public string id;
-    public int category;
-    public string imgUrl;
     public string name;
-    public string description;
-    public string price;
+    public string qty;
 
     public Ingredient() { }
 }
 
+[Serializable]
+public class Instruction
+{
+    public string id;
+    public string text;
+
+    public Instruction() { }
+}
+
+[Serializable]
+public class Favorite
+{
+    public string recipeId;
+    public Favorite() { }
+}
+
+[Serializable]
+public class CartItem
+{
+    public string ingredientId;
+    public CartItem() { }
+}
+
 public static class Categories
 {
-    static string[] categories = new string[] { "Categoría no seleccionada", "Árabe", "Asiática", "China",
-        "Comida rápida", "Hamburguesas", "Internacional","Italiana","Mexicana","Pescados y mariscos",
-        "Pizza", "Saludable", "Sandwiches", "Sushi", "Tacos", "Vegetariano" };
+    static string[] categories = new string[] { "Categoría no seleccionada", "Pasteles", "Panques", "Tartas",
+        "Pies", "Gelatinas", "Mousse","Betunes","Flan","Salsas",
+        "Pan", "Dulces", "Galletas" };
 
     public static string GetCategoryString(int category)
     {
@@ -58,23 +81,20 @@ public static class Categories
     }
 }
 
-[SerializeField]
+[Serializable]
 public enum CATEGORIES
 {
     NONE,
-    ARAB,
-    ASIAN,
-    CHINA,
-    FASTFOOD,
-    HAMBURGER,
-    INTERNATIONAL,
-    ITALIAN,
-    MEXI,
-    FISH,
-    PIZZA,
-    HEALTHY,
-    SANDWICH,
-    SUSHI,
-    TACO,
-    VEGGIE
+    CAKES,
+    CUPCAKES,
+    TARTS,
+    PIES,
+    JELLIES,
+    MOUSSE,
+    ICING,
+    FLAN,
+    SAUCES,
+    BREAD,
+    CANDIES,
+    COOKIES
 }
