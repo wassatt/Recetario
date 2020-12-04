@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [SerializeField]
 public class UserData
 {
     public string id;
-    public string profileImageUrl;
+    public string imageUrl;
     public string name;
 
     public UserData() { }
@@ -20,14 +21,15 @@ public class Recipe
     public string description;
     public string prepTime;
     public int category;
-    public int likes;
     public int difficulty;
+    public int likes;
+    public List<Ingredient> ingredients;
 
     public Recipe() { }
 }
 
 [SerializeField]
-public class Entry
+public class Ingredient
 {
     public string id;
     public int category;
@@ -36,7 +38,7 @@ public class Entry
     public string description;
     public string price;
 
-    public Entry() { }
+    public Ingredient() { }
 }
 
 public static class Categories

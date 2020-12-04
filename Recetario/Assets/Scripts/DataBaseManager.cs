@@ -83,12 +83,12 @@ public class DataBaseManager : MonoBehaviour
         {
             //Debug.Log(returnValue);
             UserData userData = JsonUtility.FromJson<UserData>(returnValue);
-            isRestaurant.Set(userData.isRestaurant);
-            ssPhoneNumber.Set(userData.phoneNumber);
-            ssBussinessAddress.Set(userData.businessAddress);
-            ssSchedule.Set(userData.schedule);
-            siCategory.Set(userData.category);
-            ssProfileImageUrl.Set(userData.profileImageUrl);
+            //isRestaurant.Set(userData.isRestaurant);
+            //ssPhoneNumber.Set(userData.phoneNumber);
+            //ssBussinessAddress.Set(userData.businessAddress);
+            //ssSchedule.Set(userData.schedule);
+            //siCategory.Set(userData.category);
+            //ssProfileImageUrl.Set(userData.profileImageUrl);
             onDataRetreived.Invoke();
             if (reloadPanels)
             {
@@ -110,7 +110,7 @@ public class DataBaseManager : MonoBehaviour
 
         string userId = AuthManager.currentUserId;
         UserData userData = new UserData();
-        userData.isRestaurant = isRestaurant;
+        //userData.isRestaurant = isRestaurant;
         string json = JsonUtility.ToJson(userData);
 
         //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateAccountType, userId, json));
@@ -132,7 +132,7 @@ public class DataBaseManager : MonoBehaviour
         string userId = AuthManager.currentUserId;
 
         UserData userData = new UserData();
-        userData.phoneNumber = phoneNumber;
+        //userData.phoneNumber = phoneNumber;
         string json = JsonUtility.ToJson(userData);
 
         //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdatePhoneNumber, userId, json));
@@ -143,7 +143,7 @@ public class DataBaseManager : MonoBehaviour
         string userId = AuthManager.currentUserId;
 
         UserData userData = new UserData();
-        userData.businessAddress = businessAddress;
+        //userData.businessAddress = businessAddress;
         string json = JsonUtility.ToJson(userData);
 
         //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateBusinessAddress, userId, json));
@@ -154,7 +154,7 @@ public class DataBaseManager : MonoBehaviour
         string userId = AuthManager.currentUserId;
 
         UserData userData = new UserData();
-        userData.schedule = schedule;
+        //userData.schedule = schedule;
         string json = JsonUtility.ToJson(userData);
 
         //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateSchedule, userId, json));
@@ -165,7 +165,7 @@ public class DataBaseManager : MonoBehaviour
         string userId = AuthManager.currentUserId;
 
         UserData userData = new UserData();
-        userData.category = category;
+        //userData.category = category;
         string json = JsonUtility.ToJson(userData);
 
         //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateCategory, userId, json));
@@ -175,7 +175,7 @@ public class DataBaseManager : MonoBehaviour
     {
         string userId = AuthManager.currentUserId;
         UserData userData = new UserData();
-        userData.isRestaurant = isRestaurant.Get(); 
+        //userData.isRestaurant = isRestaurant.Get(); 
         userData.name = AuthManager.currentUserName;
         string json = JsonUtility.ToJson(userData);
 
