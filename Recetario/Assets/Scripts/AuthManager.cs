@@ -88,15 +88,17 @@ public class AuthManager : MonoBehaviour
         {
             //Debug.Log(registerTask.Result);
 
-            StartCoroutine(UpdateProfile(signinName.var, ""));
-
-            //dbManager.PostNewUserData();
-            ClearStrings();
-            onSingInSuccess.Invoke();
+            StartCoroutine(UpdateProfile(signinName.var, "", returnValue =>
+            {
+                //Debug.Log(returnValue);
+                ClearStrings();
+                dbManager.PostNewUserData();
+                onSingInSuccess.Invoke();
+            }));
         }
     }
 
-    public IEnumerator UpdateProfile(string name, string photoUrl)
+    public IEnumerator UpdateProfile(string name, string photoUrl, System.Action<string> callback)
     {
         Firebase.Auth.UserProfile profile = new Firebase.Auth.UserProfile
         {
@@ -116,10 +118,12 @@ public class AuthManager : MonoBehaviour
         {
             currentUserName = FirebaseAuth.DefaultInstance.CurrentUser.DisplayName;
 
-            //dbManager.UpdateUserName(currentUserName);
+            dbManager.UpdateUserName(currentUserName);
             //Debug.Log(currentUserName);
             onDataUpdated.Invoke();
             //Debug.Log("User info updated");
+            yield return null;
+            callback(currentUserName);
         }
     }
 
@@ -154,27 +158,6 @@ public class AuthManager : MonoBehaviour
             }
         }
     }
-
-    /*
-    private IEnumerator UpdatePhoneNumber(string mail)
-    {
-        Firebase.Auth.Credential credential = new Credential("");
-
-
-        var user = FirebaseAuth.DefaultInstance.CurrentUser;
-
-        var updateTask = user.UpdatePhoneNumberCredentialAsync();
-        yield return new WaitUntil(() => updateTask.IsCompleted);
-
-        if (updateTask.Exception != null)
-        {
-            Debug.LogError(updateTask.Exception);
-        }
-        else
-        {
-            //Debug.Log("User info updated");
-        }
-    }*/
 
     public void LoginUser()
     {

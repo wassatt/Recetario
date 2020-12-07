@@ -30,10 +30,16 @@ public class DataBaseManager : MonoBehaviour
     {
         string userId = AuthManager.currentUserId;
         UserData userData = new UserData();
+        userData.id = AuthManager.currentUserId;
         userData.name = AuthManager.currentUserName;
         string json = JsonUtility.ToJson(userData);
 
-        //StartCoroutine(endpointsTools.PostWithParam(API.urlPostNewUser, userId, json));
+        StartCoroutine(endpointsTools.PostJsonWithParam(API.urlPostNewUser, userId, json, returnValue =>
+        {
+            Debug.Log(returnValue);
+            sUserData.Set(userData);
+            onReloadPanels.Invoke();
+        }));
     }
 
     public void GetUserData(bool reloadPanels)
