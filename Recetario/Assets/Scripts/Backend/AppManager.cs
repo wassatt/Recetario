@@ -6,10 +6,10 @@ using UnityEngine.Events;
 public class AppManager : MonoBehaviour
 {
     [SerializeField]
-    private ScriptableBool isRestaurant;
+    private ScriptableBool isAlle;
 
-    public UnityEvent onSetRestaurantHome;
-    public UnityEvent onSetCustomerHome;
+    public UnityEvent onLoadAllesMode;
+    public UnityEvent onLoadGuestMode;
 
     // Start is called before the first frame update
     void Start()
@@ -26,15 +26,15 @@ public class AppManager : MonoBehaviour
     public void InitApp()
     {
 
-        if (isRestaurant.Get())
+        if (isAlle.Get())
         {
 
-            onSetRestaurantHome.Invoke();
+            onLoadAllesMode.Invoke();
         }
         else
         {
 
-            onSetCustomerHome.Invoke();
+            onLoadGuestMode.Invoke();
         }
     }
 
