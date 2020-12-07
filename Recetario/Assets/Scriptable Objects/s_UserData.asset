@@ -12,3 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07382dc61510da04a898c7584a0c3d13, type: 3}
   m_Name: s_UserData
   m_EditorClassIdentifier: 
+  userData:
+    id: 
+    imageUrl: 
+    name: 
+    favorites:
+    - recipeId: 
+    cart:
+    - ingredientId: 
