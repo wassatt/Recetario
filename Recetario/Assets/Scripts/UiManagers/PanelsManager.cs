@@ -5,6 +5,24 @@ public class PanelsManager : MonoBehaviour
 {
     public Panel[] panels;
 
+    private void Start()
+    {
+        for (int i = 0; i < panels.Length; i++)
+        {
+            if (panels[i].panel == null)
+            {
+                Debug.LogWarning($"PanelsManager: reference at {panels[i].name} is empty");
+            }
+            for (int j = 0; j < panels[i].subPanels.Length; j++)
+            {
+                if (panels[i].subPanels[j].subPanel == null)
+                {
+                    Debug.LogWarning($"PanelsManager: reference at {panels[i].name}/{panels[i].subPanels[j].name} is empty");
+                }
+            }
+        }
+    }
+
     public void TurnOnPanel(string panelName)
     {
         if (!string.IsNullOrEmpty(panelName))
