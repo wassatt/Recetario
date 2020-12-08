@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 434099134785100034}
   - component: {fileID: 434099134785100035}
   - component: {fileID: 1794328570}
+  - component: {fileID: 173666938507317969}
   m_Layer: 0
   m_Name: pfb_AppManager
   m_TagString: Untagged
@@ -44,13 +45,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9c86c019475a7479f85282a52261d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAlle: {fileID: 0}
+  dbManager: {fileID: 0}
+  isAlle: 0
   onLoadAllesMode:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onLoadGuestMode:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1794328570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,3 +120,18 @@ MonoBehaviour:
   ifPasswordMail: {fileID: 0}
   btnAcceptName: {fileID: 0}
   btnAcceptMail: {fileID: 0}
+--- !u!114 &173666938507317969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434099134785100033}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c06a2ba3321214ee987d6dfe36636a78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contentObj: {fileID: 0}
+  pfb_grp_ingredient: {fileID: 2559336496892424607, guid: 6d88c29c5f47e43eea579dee2aa353d6,
+    type: 3}

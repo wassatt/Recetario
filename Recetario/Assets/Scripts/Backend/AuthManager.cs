@@ -133,7 +133,9 @@ public class AuthManager : MonoBehaviour
 
         if (loginTask.Exception != null)
         {
-            Debug.LogError(loginTask.Exception);
+            //Debug.LogError(loginTask.Exception);
+            yield return null;
+            callback(loginTask.Exception.ToString());
             onLogInFailed.Invoke();
         }
         else
@@ -143,7 +145,7 @@ public class AuthManager : MonoBehaviour
 
             if (updateTask.Exception != null)
             {
-                Debug.LogError(updateTask.Exception);
+                //Debug.LogError(updateTask.Exception);
                 callback(updateTask.Exception.ToString());
             }
             else
@@ -157,11 +159,44 @@ public class AuthManager : MonoBehaviour
         }
     }
 
+    public IEnumerator UpdatePassword(string email, string currentPass, string newPass, System.Action<string> callback)
+    {
+        var user = FirebaseAuth.DefaultInstance.CurrentUser;
+
+        var auth = FirebaseAuth.DefaultInstance;
+        var loginTask = auth.SignInWithEmailAndPasswordAsync(email, currentPass);
+        yield return new WaitUntil(() => loginTask.IsCompleted);
+
+        if (loginTask.Exception != null)
+        {
+            //Debug.LogError(loginTask.Exception);
+            yield return null;
+            callback(loginTask.Exception.ToString());
+            onLogInFailed.Invoke();
+        }
+        else
+        {
+            var updateTask = user.UpdatePasswordAsync(newPass);
+            yield return new WaitUntil(() => updateTask.IsCompleted);
+
+            if (updateTask.Exception != null)
+            {
+                //Debug.LogError(updateTask.Exception);
+                callback(updateTask.Exception.ToString());
+            }
+            else
+            {
+                //Debug.Log("Password changed");
+                yield return null;
+                callback("Password changed");
+            }
+        }
+    }
+
     public void LoginUser()
     {
         StartCoroutine(LoginCoroutine(loginMail.Get(), loginPass.Get()));
     }
-
 
     private IEnumerator LoginCoroutine(string email, string password)
     {
@@ -187,8 +222,9 @@ public class AuthManager : MonoBehaviour
     {
         FirebaseAuth.DefaultInstance.SignOut();
         ClearStrings();
+        //TODO: add ClearUserData();
         SceneManager.LoadScene("Main");
-    }//*/
+    }
 
     private void ClearStrings()
     {

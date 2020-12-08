@@ -18,12 +18,12 @@ public class DataBaseManager : MonoBehaviour
     public UnityEvent onReloadPanels;
     public UnityEvent onConnectionError;
 
-    private DatabaseReference reference;
+    //private DatabaseReference reference;
 
     void Start()
     {
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl(dataBaseUrl);
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl(dataBaseUrl);
+        //reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
     public void PostNewUserData()
@@ -75,18 +75,13 @@ public class DataBaseManager : MonoBehaviour
         }));
     }
 
-    public void UploadProfileImage(string path)
-    {
-        string userId = AuthManager.currentUserId;
-        var bytes = System.IO.File.ReadAllBytes(path);
-        //StartCoroutine(endpointsTools.PostWithParam(API.urlPostUserProfileImage, userId, bytes));
-    }
-
     public void UploadProfileImage(ScriptableString imagePath)
     {
         string userId = AuthManager.currentUserId;
         var bytes = System.IO.File.ReadAllBytes(imagePath.Get());
-        //StartCoroutine(endpointsTools.PostWithParam(API.urlPostUserProfileImage, userId, bytes));
+        StartCoroutine(endpointsTools.PostFileWithParam(API.urlPostUserProfileImage, userId, bytes, returnValue =>
+        {
+            //Debug.Log(returnValue);
+        }));
     }
-
 }

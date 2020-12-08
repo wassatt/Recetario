@@ -22,11 +22,17 @@ public class UiManagerProfile : MonoBehaviour
     [SerializeField]
     private InputField ifMail;
     [SerializeField]
+    private InputField ifCurrentPass;
+    [SerializeField]
+    private InputField ifNewPass;
+    [SerializeField]
     private InputField ifPasswordMail;
     [SerializeField]
     private Button btnAcceptName;
     [SerializeField]
     private Button btnAcceptMail;
+    [SerializeField]
+    private Button btnAcceptPass;
 
     #endregion
 
@@ -36,6 +42,7 @@ public class UiManagerProfile : MonoBehaviour
         UpdateUiTextValues();
         btnAcceptName.onClick.AddListener(delegate { UpdateUserName(); });
         btnAcceptMail.onClick.AddListener(delegate { UpdateUserMail(); });
+        btnAcceptPass.onClick.AddListener(delegate { UpdateUserPassword(); });
     }
 
     public void UpdateUiTextValues() //Don't enter coroutines in this method
@@ -79,4 +86,11 @@ public class UiManagerProfile : MonoBehaviour
         }));
     }
 
+    public void UpdateUserPassword()
+    {
+        StartCoroutine(authManager.UpdatePassword(AuthManager.currentUserMail, ifCurrentPass.text, ifNewPass.text, returnValue =>
+        {
+            //Debug.Log(returnValue);
+        }));
+    }
 }

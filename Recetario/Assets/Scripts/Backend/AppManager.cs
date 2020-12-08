@@ -6,27 +6,23 @@ using UnityEngine.Events;
 public class AppManager : MonoBehaviour
 {
     [SerializeField]
-    private ScriptableBool isAlle;
+    private DataBaseManager dbManager;
+    [SerializeField]
+    private bool isAlle;
 
     public UnityEvent onLoadAllesMode;
     public UnityEvent onLoadGuestMode;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
+        //TODO: endpoint isAlle;
         InitApp();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void InitApp()
     {
 
-        if (isAlle.Get())
+        if (isAlle)
         {
 
             onLoadAllesMode.Invoke();
