@@ -25,7 +25,7 @@ public class AuthManager : MonoBehaviour
     public UnityEvent onLogInFailed;
     public UnityEvent onSingInSuccess;
     public UnityEvent onSingInFailed;
-    public UnityEvent onDataUpdated;
+    //public UnityEvent onDataUpdated;
 
     public static string currentUserId;
     public static string currentUserMail;
@@ -59,12 +59,8 @@ public class AuthManager : MonoBehaviour
             currentUserName = FirebaseAuth.DefaultInstance.CurrentUser.DisplayName;
             //Debug.Log(currentUserName);
 
-            //dbManager.SubscribeDatabaseListeners();
+            dbManager.GetUserData(true);
             onUserLoggedPrev.Invoke();
-        }
-        else
-        {
-            //dbManager.UnsubscribeDatabaseListeners();
         }
     }
 
@@ -113,6 +109,7 @@ public class AuthManager : MonoBehaviour
         if (updateTask.Exception != null)
         {
             Debug.LogError(updateTask.Exception);
+            callback(updateTask.Exception.ToString());
         }
         else
         {
@@ -120,14 +117,13 @@ public class AuthManager : MonoBehaviour
 
             dbManager.UpdateUserName(currentUserName);
             //Debug.Log(currentUserName);
-            onDataUpdated.Invoke();
             //Debug.Log("User info updated");
             yield return null;
             callback(currentUserName);
         }
     }
 
-    public IEnumerator UpdateMail(string currentMail, string newMail, string password)
+    public IEnumerator UpdateMail(string currentMail, string newMail, string password, System.Action<string> callback)
     {
         var user = FirebaseAuth.DefaultInstance.CurrentUser;
 
@@ -148,13 +144,15 @@ public class AuthManager : MonoBehaviour
             if (updateTask.Exception != null)
             {
                 Debug.LogError(updateTask.Exception);
+                callback(updateTask.Exception.ToString());
             }
             else
             {
                 currentUserMail = FirebaseAuth.DefaultInstance.CurrentUser.Email;
                 //Debug.Log(currentUserMail);
-                onDataUpdated.Invoke();
                 //Debug.Log("User info updated");
+                yield return null;
+                callback(currentUserMail);
             }
         }
     }
@@ -180,6 +178,7 @@ public class AuthManager : MonoBehaviour
         {
             //Debug.Log(loginTask.Result);
             ClearStrings();
+            dbManager.GetUserData(true);
             onLogInSuccess.Invoke();
         }
     }

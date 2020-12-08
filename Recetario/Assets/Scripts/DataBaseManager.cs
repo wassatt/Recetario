@@ -67,7 +67,12 @@ public class DataBaseManager : MonoBehaviour
         userData.name = userName;
         string json = JsonUtility.ToJson(userData);
 
-        //StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateUserName, userId, json));
+        StartCoroutine(endpointsTools.PatchWithParam(API.urlUpdateUserName, userId, json, returnValue =>
+        {
+            //Debug.Log(returnValue);
+            sUserData.Set(userData);
+            onReloadPanels.Invoke();
+        }));
     }
 
     public void UploadProfileImage(string path)

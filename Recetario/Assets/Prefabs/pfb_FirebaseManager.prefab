@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7101475209411882589}
   - component: {fileID: 7101475209411882591}
   - component: {fileID: 7101475209411882560}
+  - component: {fileID: 194888069}
   m_Layer: 0
   m_Name: pfb_FirebaseManager
   m_TagString: Untagged
@@ -69,7 +70,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &7101475209411882591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,31 +159,6 @@ MonoBehaviour:
           m_StringArgument: Ha ocurrido un error al crear tu cuenta.
           m_BoolArgument: 0
         m_CallState: 2
-  onDataUpdated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: UpdateUiTextValues
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: UpdateUiTextValues
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &7101475209411882560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,14 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataBaseUrl: https://recetario-79536.firebaseio.com/
-  endpointsTools: {fileID: 0}
-  isRestaurant: {fileID: 0}
-  siCategory: {fileID: 0}
-  ssPhoneNumber: {fileID: 11400000, guid: 2414486217054d742ad0ea2b3f893ee9, type: 2}
-  ssBussinessAddress: {fileID: 0}
-  ssSchedule: {fileID: 0}
-  ssName: {fileID: 0}
-  ssProfileImageUrl: {fileID: 11400000, guid: 0fe0230cbbe74e64f9b1dd1fa785f821, type: 2}
+  endpointsTools: {fileID: 194888069}
+  sUserData: {fileID: 11400000, guid: dd8a9e9be0fc62540a4373184266f208, type: 2}
   onDataSent:
     m_PersistentCalls:
       m_Calls: []
@@ -222,8 +192,8 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_MethodName: UpdateUiTextValues
-        m_Mode: 1
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -247,7 +217,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: InitApp
+        m_MethodName: UpdateUiTextValues
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -260,3 +230,15 @@ MonoBehaviour:
   onConnectionError:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &194888069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101475209411882588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd6fbc58b76dd34795eea4c905eda52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

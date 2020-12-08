@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 434099134785100034}
   - component: {fileID: 434099134785100035}
-  - component: {fileID: 434099134785100036}
-  - component: {fileID: 434099134785100037}
+  - component: {fileID: 1794328570}
   m_Layer: 0
-  m_Name: AppManager
+  m_Name: pfb_AppManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,59 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9c86c019475a7479f85282a52261d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRestaurant: {fileID: 11400000, guid: bc84f28db043e494394264d953d5d90b, type: 2}
-  onSetRestaurantHome:
+  isAlle: {fileID: 0}
+  onLoadAllesMode:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: TurnOnPanel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Menu
-          m_BoolArgument: 0
-        m_CallState: 2
-  onSetCustomerHome:
+      m_Calls: []
+  onLoadGuestMode:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: TurnOnPanel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Search
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 434099134785100037}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &434099134785100036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434099134785100033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4bc67d3eaf46d43b502b484eac1f9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &434099134785100037
+      m_Calls: []
+--- !u!114 &1794328570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,25 +60,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 434099134785100033}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b2a60effd704fe4883369a921a4d665, type: 3}
+  m_Script: {fileID: 11500000, guid: 48ac4c74a6a22c04e93ed0d76c3a1071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  authManager: {fileID: 0}
   dbManager: {fileID: 0}
-  contentAll: {fileID: 0}
-  contentSearchObj: {fileID: 0}
-  pfb_grp_Product: {fileID: 2534547564679435640, guid: 646e72caed3f9d54ab7a3bb7885dc181,
-    type: 3}
-  onCategorySearchDone:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: TurnOnSubPanel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Search,Suggestions
-          m_BoolArgument: 0
-        m_CallState: 2
+  sUserData: {fileID: 11400000, guid: dd8a9e9be0fc62540a4373184266f208, type: 2}
+  imgProfile: {fileID: 0}
+  txtName: {fileID: 0}
+  txtMail: {fileID: 0}
+  ifName: {fileID: 0}
+  ifMail: {fileID: 0}
+  ifPasswordMail: {fileID: 0}
+  btnAcceptName: {fileID: 0}
+  btnAcceptMail: {fileID: 0}
