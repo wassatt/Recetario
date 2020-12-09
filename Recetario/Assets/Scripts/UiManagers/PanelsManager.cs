@@ -33,7 +33,10 @@ public class PanelsManager : MonoBehaviour
                 {
                     if (panels[i].name.Equals(panelName))
                     {
-                        panels[i].panel.SetActive(true);
+                        if (panels[i].panel != null)
+                           panels[i].panel.SetActive(true);
+                        else
+                            Debug.LogWarning($"PanelsManager: Can't activate {panels[i].name} because reference is empty");
                         if (!string.IsNullOrEmpty(panels[i].defaultSubPanel))
                             TurnOnSubPanel(panelName + "," + panels[i].defaultSubPanel);
                     }
@@ -84,39 +87,21 @@ public class PanelsManager : MonoBehaviour
                     {
                         if (panels[i].subPanels[j].name.Equals(subPanelName))
                         {
-                            panels[i].subPanels[j].subPanel.SetActive(true);
+                            if (panels[i].subPanels[j].subPanel != null)
+                                panels[i].subPanels[j].subPanel.SetActive(true);
+                            else
+                                Debug.LogWarning($"PanelsManager: Can't activate {panels[i].name}/{panels[i].subPanels[j].name} because reference is empty");
                         }
                         else
                         {
-                            panels[i].subPanels[j].subPanel.SetActive(false);
+                            if (panels[i].subPanels[j].subPanel != null)
+                                panels[i].subPanels[j].subPanel.SetActive(false);
+                            else
+                                Debug.LogWarning($"PanelsManager: {panels[i].name}/{panels[i].subPanels[j].name} reference is empty");
                         }
                     }
                 }
             }
-        }
-    }
-
-    public void TurnOnPanel(int panelIndex)
-    {
-        if(panels.Length > 0)
-        {
-            for (int i = 0; i < panels.Length; i++)
-            {
-                panels[i].panel.SetActive(false);
-            }
-            panels[panelIndex].panel.SetActive(true);
-        }
-    }
-
-    public void TurnOnPanel(ScriptableInt panelIndex)
-    {
-        if (panels.Length > 0)
-        {
-            for (int i = 0; i < panels.Length; i++)
-            {
-                panels[i].panel.SetActive(false);
-            }
-            panels[panelIndex.var].panel.SetActive(true);
         }
     }
 }
