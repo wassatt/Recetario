@@ -1,10 +1,7 @@
 ﻿using Firebase;
 using Firebase.Database;
-using Firebase.Unity.Editor;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class DataBaseManager : MonoBehaviour
 {
@@ -18,12 +15,8 @@ public class DataBaseManager : MonoBehaviour
     public UnityEvent onReloadPanels;
     public UnityEvent onConnectionError;
 
-    //private DatabaseReference reference;
-
     void Start()
     {
-        //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl(dataBaseUrl);
-        //reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
     public void PostNewUserData()
