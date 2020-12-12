@@ -2,19 +2,16 @@
 using UnityEngine.UI;
 using SimpleJSON;
 
-public class RecipesContentManager : MonoBehaviour
+public class RecipesContentManagerAdmin : MonoBehaviour
 {
     [SerializeField]
     private DataBaseManager dbManager;
-    [SerializeField]
-    private InputField ifSearch;
     [SerializeField]
     private GameObject contentRecipesObj;
     [SerializeField]
     private GameObject pfb_grp_recipe_preview;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         GetResRecipes();
     }
@@ -27,7 +24,7 @@ public class RecipesContentManager : MonoBehaviour
         }
 
         Recipe recipe = new Recipe();
-        
+
         StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetRecipes, "", "", returnValue =>
         {
             //Debug.Log(returnValue);
