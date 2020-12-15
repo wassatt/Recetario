@@ -27,7 +27,8 @@ public class RecipesContentManager : MonoBehaviour
         }
 
         Recipe recipe = new Recipe();
-        
+
+        //TODO: make get random restaurants endpoint
         StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetRecipes, "", "", returnValue =>
         {
             //Debug.Log(returnValue);
@@ -38,9 +39,14 @@ public class RecipesContentManager : MonoBehaviour
                 string objString = obj.ToString();
                 //Debug.Log(objString);
                 recipe = JsonUtility.FromJson<Recipe>(objString);
-                //TODO: foreach ingradients
                 InstantiatRecipePreview(recipe);
             }
+
+            //foreach (Transform child in contentRecipesObj.transform)
+            //{
+                //child.gameObject.GetComponent<RestaurantImageLoader>().Init();
+                //child.gameObject.GetComponent<RestaurantImageLoader>().LoadImage();
+            //}
         }));
     }
 
