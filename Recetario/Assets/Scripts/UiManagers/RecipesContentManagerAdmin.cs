@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using SimpleJSON;
+using UnityEngine.Events;
 
 public class RecipesContentManagerAdmin : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class RecipesContentManagerAdmin : MonoBehaviour
     private GameObject contentRecipesObj;
     [SerializeField]
     private GameObject pfb_grp_recipe_preview;
+    [SerializeField]
+    private UiManagerEditRecipe editPanel;
+
+
+    public UnityEvent onEditRecipe;
 
     private void OnEnable()
     {
@@ -47,5 +53,16 @@ public class RecipesContentManagerAdmin : MonoBehaviour
         recipeData.recipe = recipe;
         UIManagerRecipePreview recipePreview = obj.GetComponent<UIManagerRecipePreview>();
         recipePreview.InitUiValues(recipeData.recipe);
+
+        obj.transform.Find("btn_edit").GetComponent<Button>().onClick.AddListener(delegate {
+            editPanel.recipe = recipeData.recipe;
+            //open menu editor
+            onEditRecipe.Invoke();
+        });
+
+        obj.transform.Find("btn_erase").GetComponent<Button>().onClick.AddListener(delegate {
+            //endpoint delete recipe
+            //GetResRecipes();
+        });
     }
 }

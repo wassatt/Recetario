@@ -10405,7 +10405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -16756,6 +16756,7 @@ GameObject:
   - component: {fileID: 4670927722045187175}
   - component: {fileID: 4670927722045187172}
   - component: {fileID: 4670927722045187173}
+  - component: {fileID: 8189378333018457874}
   m_Layer: 5
   m_Name: panel_AddRecipe
   m_TagString: Untagged
@@ -16849,6 +16850,32 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8189378333018457874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4670927722045187195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eddb02423b473a4d9af29b6120b6916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipe:
+    id: 
+    imageUrl: 
+    name: 
+    description: 
+    prepTime: 
+    category: 0
+    difficulty: 0
+    likes: 0
+    ingredients: []
+    instructions: []
+  imgDish: {fileID: 3563750521234587820}
+  ifName: {fileID: 7059375045948521882}
+  ifDescription: {fileID: 3038359907562732145}
 --- !u!1 &4894673702630168283
 GameObject:
   m_ObjectHideFlags: 0
@@ -24021,6 +24048,21 @@ MonoBehaviour:
   contentRecipesObj: {fileID: 122307855201130812}
   pfb_grp_recipe_preview: {fileID: 5733818532818882817, guid: 94cf2db5b90d3bb4e918cd8ef8f458b2,
     type: 3}
+  editPanel: {fileID: 8189378333018457874}
+  onEditRecipe:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: TurnOnSubPanel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Profile,AddRecipe
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8523953124997520791
 GameObject:
   m_ObjectHideFlags: 0

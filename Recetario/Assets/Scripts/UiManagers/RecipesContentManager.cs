@@ -38,6 +38,7 @@ public class RecipesContentManager : MonoBehaviour
                 string objString = obj.ToString();
                 //Debug.Log(objString);
                 recipe = JsonUtility.FromJson<Recipe>(objString);
+                //TODO: foreach ingradients
                 InstantiatRecipePreview(recipe);
             }
         }));
