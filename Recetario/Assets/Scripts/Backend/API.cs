@@ -14,4 +14,11 @@
     public const string urlPostRecipeImage = urlApi + "/uploadRecipeImage";
     public const string urlUpdateRecipe = urlApi + "/updateRecipe";
     public const string urlLikeRecipe = urlApi + "/likeRecipe";
+    public const string urlDeleteRecipe = urlApi + "/deleteRecipe";
+
+    public const string urlPostNewIngredient = urlApi + "/newIngredient";
+    public const string urlUpdateIngredient = urlApi + "/updateIngredient";
+    public const string urlDeleteIngredient = urlApi + "/deleteIngredient";
+
+
 }

@@ -56,6 +56,7 @@ public class RecipesContentManagerAdmin : MonoBehaviour
 
         obj.transform.Find("btn_edit").GetComponent<Button>().onClick.AddListener(delegate {
             editPanel.recipe = recipeData.recipe;
+            editPanel.dbManager = dbManager;
             //open menu editor
             onEditRecipe.Invoke();
         });
