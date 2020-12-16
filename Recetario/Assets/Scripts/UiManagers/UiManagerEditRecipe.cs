@@ -10,6 +10,14 @@ public class UiManagerEditRecipe : MonoBehaviour
     [SerializeField]
     private Image imgDish;
     [SerializeField]
+    private Dropdown ddCategory;
+    [SerializeField]
+    private Dropdown ddDifficulty;
+    [SerializeField]
+    private Dropdown ddHours;
+    [SerializeField]
+    private Dropdown ddMinutes;
+    [SerializeField]
     private InputField ifName;
     [SerializeField]
     private InputField ifDescription;
@@ -37,13 +45,23 @@ public class UiManagerEditRecipe : MonoBehaviour
 
         ifName.text = recipe.name;
         ifDescription.text = recipe.description;
-    }
+        ddCategory.SetValueWithoutNotify(recipe.category);
+        ddDifficulty.SetValueWithoutNotify(recipe.difficulty);
 
+        string[] aPrepTime = recipe.prepTime.Split('-');
+        int hours = int.Parse(aPrepTime[0]);
+        int minutes = int.Parse(aPrepTime[1]);
+        ddHours.SetValueWithoutNotify(hours);
+        ddMinutes.SetValueWithoutNotify(minutes);
+    }
 
     public void UpdateRecipe()
     {
         recipe.name = ifName.text;
         recipe.description = ifDescription.text;
+        recipe.category = ddCategory.value;
+        recipe.difficulty = ddDifficulty.value;
+        recipe.prepTime = $"{ddHours.value}-{ddMinutes.value}";
         string json = JsonUtility.ToJson(recipe);
 
         StartCoroutine(dbManager.endpointsTools.PatchWithParam(API.urlUpdateRecipe, recipe.id, json, returnValue =>

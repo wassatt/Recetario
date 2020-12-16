@@ -19,7 +19,7 @@ public class RecipesContentManager : MonoBehaviour
         GetResRecipes();
     }
 
-    private void GetResRecipes()
+    public void GetResRecipes()
     {
         foreach (Transform child in contentRecipesObj.transform)
         {
@@ -50,6 +50,7 @@ public class RecipesContentManager : MonoBehaviour
         RecipeData recipeData = obj.GetComponent<RecipeData>();
         recipeData.recipe = recipe;
         UIManagerRecipePreview recipePreview = obj.GetComponent<UIManagerRecipePreview>();
+        recipePreview.dbManager = dbManager;
         recipePreview.InitUiValues(recipeData.recipe);
     }
 }

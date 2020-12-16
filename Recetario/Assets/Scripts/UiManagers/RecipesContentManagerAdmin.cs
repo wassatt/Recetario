@@ -22,6 +22,15 @@ public class RecipesContentManagerAdmin : MonoBehaviour
         GetResRecipes();
     }
 
+    public void AddNewRecipe()
+    {
+        StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlPostNewRecipe, "", "{}", returnValue =>
+        {
+            //Debug.Log(returnValue);
+            GetResRecipes();
+        }));
+    }
+
     private void GetResRecipes()
     {
         foreach (Transform child in contentRecipesObj.transform)
@@ -52,6 +61,7 @@ public class RecipesContentManagerAdmin : MonoBehaviour
         RecipeData recipeData = obj.GetComponent<RecipeData>();
         recipeData.recipe = recipe;
         UIManagerRecipePreview recipePreview = obj.GetComponent<UIManagerRecipePreview>();
+        recipePreview.dbManager = dbManager;
         recipePreview.InitUiValues(recipeData.recipe);
 
         obj.transform.Find("btn_edit").GetComponent<Button>().onClick.AddListener(delegate {
@@ -63,7 +73,11 @@ public class RecipesContentManagerAdmin : MonoBehaviour
 
         obj.transform.Find("btn_erase").GetComponent<Button>().onClick.AddListener(delegate {
             //endpoint delete recipe
-            //GetResRecipes();
+            StartCoroutine(dbManager.endpointsTools.DeleteWithParam(API.urlDeleteRecipe, recipeData.recipe.id, returnValue =>
+            {
+                //Debug.Log(returnValue);
+                GetResRecipes();
+            }));
         });
     }
 }

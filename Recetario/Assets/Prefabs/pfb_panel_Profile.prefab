@@ -979,14 +979,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.6509804}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -997,7 +997,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Categor\xEDa"
+  m_Text: 
 --- !u!1 &263774830762076050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,13 +1808,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: "Categor\xEDa"
-      m_Image: {fileID: 0}
     - m_Text: Pasteles
       m_Image: {fileID: 0}
     - m_Text: "Panqu\xE9s"
       m_Image: {fileID: 0}
-    - m_Text: Tortas
+    - m_Text: Tartas
       m_Image: {fileID: 0}
     - m_Text: Pies
       m_Image: {fileID: 0}
@@ -12940,7 +12938,7 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 0
+  m_LineType: 2
   m_HideMobileInput: 0
   m_CharacterValidation: 0
   m_CharacterLimit: 0
@@ -14992,7 +14990,7 @@ GameObject:
   - component: {fileID: 4670927722045187173}
   - component: {fileID: 8189378333018457874}
   m_Layer: 5
-  m_Name: panel_AddRecipe
+  m_Name: panel_EditRecipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15105,10 +15103,14 @@ MonoBehaviour:
     category: 0
     difficulty: 0
     likes: 0
-    ingredients: []
-    instructions: []
+    listIngredients: []
+    listInstructions: []
   dbManager: {fileID: 0}
   imgDish: {fileID: 3563750521234587820}
+  ddCategory: {fileID: 263774831885336572}
+  ddDifficulty: {fileID: 4948868229082018025}
+  ddHours: {fileID: 4948868229128375533}
+  ddMinutes: {fileID: 8754225241470768213}
   ifName: {fileID: 2025681670256901296}
   ifDescription: {fileID: 3038359907562732145}
   onBackToMyRecipes:
@@ -16423,11 +16425,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Sencilla
+    - m_Text: "F\xE1cil"
       m_Image: {fileID: 0}
     - m_Text: Intermedia
       m_Image: {fileID: 0}
-    - m_Text: Complicada
+    - m_Text: Avanzada
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16558,6 +16560,8 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: 0
+      m_Image: {fileID: 0}
     - m_Text: 1
       m_Image: {fileID: 0}
     - m_Text: 2
@@ -16630,14 +16634,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.6509804}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -17336,14 +17340,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.6509804}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -18647,14 +18651,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.6509804}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -19554,14 +19558,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -20680,22 +20684,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
-    m_FontStyle: 2
+    m_FontSize: 27
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
@@ -24768,15 +24772,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: TurnOnSubPanel
-        m_Mode: 5
+      - m_Target: {fileID: 4903213088711820967}
+        m_MethodName: AddNewRecipe
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Profile,AddRecipe
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &7628634460948124003
@@ -27583,6 +27587,8 @@ MonoBehaviour:
     - m_Text: 00
       m_Image: {fileID: 0}
     - m_Text: 15
+      m_Image: {fileID: 0}
+    - m_Text: 25
       m_Image: {fileID: 0}
     - m_Text: 30
       m_Image: {fileID: 0}

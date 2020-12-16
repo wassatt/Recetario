@@ -8,8 +8,8 @@ public class UserData
     public string id;
     public string imageUrl;
     public string name;
-    public List<Favorite> favorites;
-    public List<CartItem> cart;
+    public List<Favorite> listFavorites;
+    public List<CartItem> listCart;
 
     public UserData() { }
 }
@@ -25,8 +25,8 @@ public class Recipe
     public int category;
     public int difficulty;
     public int likes;
-    public List<Ingredient> ingredients;
-    public List<Instruction> instructions;
+    public List<Ingredient> listIngredients;
+    public List<Instruction> listInstructions;
 
     public Recipe() { }
 }
@@ -66,7 +66,7 @@ public class CartItem
 
 public static class Categories
 {
-    static string[] categories = new string[] { "Categoría no seleccionada", "Pasteles", "Panqués", "Tartas",
+    static string[] categories = new string[] { "Pasteles", "Panqués", "Tartas",
         "Pies", "Gelatinas", "Mousse","Betunes","Flan","Salsas",
         "Pan", "Dulces", "Galletas" };
 
@@ -84,7 +84,6 @@ public static class Categories
 [Serializable]
 public enum CATEGORIES
 {
-    NONE,
     CAKES,
     CUPCAKES,
     TARTS,

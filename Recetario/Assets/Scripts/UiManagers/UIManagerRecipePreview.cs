@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIManagerRecipePreview : MonoBehaviour
 {
+    public DataBaseManager dbManager;
     [SerializeField]
     private Image imgDish;
     [SerializeField]
@@ -24,7 +25,15 @@ public class UIManagerRecipePreview : MonoBehaviour
             imgDifficulty.overrideSprite = spritesDiff[recipe.difficulty];
 
         if (!string.IsNullOrEmpty(recipe.imageUrl))
-            StartCoroutine(GetImageCoroutine(recipe.imageUrl, imgDish));
+        {
+            StartCoroutine(dbManager.endpointsTools.GetImageCoroutine(recipe.imageUrl, returnValue =>
+            {
+                var _texture = new Texture2D(1, 1);
+                _texture.LoadImage(returnValue);
+                Sprite sprite = Sprite.Create(_texture, new Rect(0.0f, 0.0f, _texture.width, _texture.height), new Vector2(0.5f, 0.5f), 100.0f);
+                imgDish.overrideSprite = sprite;
+            }));
+        }
 
         txtName.text = recipe.name;
         txtPrepTime.text = recipe.prepTime;
