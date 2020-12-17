@@ -48,11 +48,14 @@ public class UiManagerEditRecipe : MonoBehaviour
         ddCategory.SetValueWithoutNotify(recipe.category);
         ddDifficulty.SetValueWithoutNotify(recipe.difficulty);
 
-        string[] aPrepTime = recipe.prepTime.Split('-');
-        int hours = int.Parse(aPrepTime[0]);
-        int minutes = int.Parse(aPrepTime[1]);
-        ddHours.SetValueWithoutNotify(hours);
-        ddMinutes.SetValueWithoutNotify(minutes);
+        if (!string.IsNullOrEmpty(recipe.prepTime))
+        {
+            string[] aPrepTime = recipe.prepTime.Split('-');
+            int hours = int.Parse(aPrepTime[0]);
+            int minutes = int.Parse(aPrepTime[1]);
+            ddHours.SetValueWithoutNotify(hours);
+            ddMinutes.SetValueWithoutNotify(minutes);
+        }
     }
 
     public void UpdateRecipe()

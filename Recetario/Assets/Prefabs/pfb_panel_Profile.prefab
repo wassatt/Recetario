@@ -13040,7 +13040,7 @@ GameObject:
   - component: {fileID: 3563750521234587819}
   - component: {fileID: 3563750521234587820}
   m_Layer: 5
-  m_Name: img_Recipe_Picture (1)
+  m_Name: img_Recipe_Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14901,7 +14901,7 @@ GameObject:
   - component: {fileID: 4670927720241589242}
   - component: {fileID: 2241298952034749442}
   m_Layer: 5
-  m_Name: img_Recipe_Picture
+  m_Name: img_Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
