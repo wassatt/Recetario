@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 1145865890983112572}
   - component: {fileID: 4665749926217361439}
   - component: {fileID: 3757261321505582145}
-  - component: {fileID: 3768962512980359106}
+  - component: {fileID: 4821480042833975384}
   - component: {fileID: 6074851044809073357}
   - component: {fileID: 2792829962093720578}
   m_Layer: 5
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3768962512980359106
+--- !u!114 &4821480042833975384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -647,8 +647,8 @@ MonoBehaviour:
     category: 0
     difficulty: 0
     likes: 0
-    ingredients: []
-    instructions: []
+    listIngredients: []
+    listInstructions: []
 --- !u!114 &2792829962093720578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c7af7db59230c47a72fd981c5b0729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dbManager: {fileID: 0}
   imgDish: {fileID: 6629630005956859692}
   imgDifficulty: {fileID: 6629630005052269472}
   txtName: {fileID: 132919011357239475}
@@ -882,7 +883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 49.37, y: 0}
+  m_AnchoredPosition: {x: 106.869995, y: 0}
   m_SizeDelta: {x: 0, y: 41.016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6629630005079144382

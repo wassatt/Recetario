@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7907280986238364845}
   - component: {fileID: 2493501104307137486}
   - component: {fileID: 6232658210161913744}
-  - component: {fileID: 6202771370712888339}
+  - component: {fileID: 1140055237953851881}
   - component: {fileID: 3896902355751903516}
   - component: {fileID: 4942842225421793235}
   m_Layer: 5
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6202771370712888339
+--- !u!114 &1140055237953851881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,8 +114,8 @@ MonoBehaviour:
     category: 0
     difficulty: 0
     likes: 0
-    ingredients: []
-    instructions: []
+    listIngredients: []
+    listInstructions: []
 --- !u!114 &4942842225421793235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c7af7db59230c47a72fd981c5b0729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dbManager: {fileID: 0}
   imgDish: {fileID: 4493340634579244285}
   imgDifficulty: {fileID: 4493340634678141041}
   txtName: {fileID: 7170462879712340834}
