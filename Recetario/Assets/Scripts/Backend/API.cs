@@ -20,5 +20,7 @@
     public const string urlUpdateIngredient = urlApi + "/updateIngredient";
     public const string urlDeleteIngredient = urlApi + "/deleteIngredient";
 
-
+    public const string urlPostNewInstruction = urlApi + "/newInstruction";
+    public const string urlUpdateInstruction = urlApi + "/patchInstruction";
+    public const string urlDeleteInstruction = urlApi + "/deleteInstruction";
 }

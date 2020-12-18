@@ -39,6 +39,7 @@ public class UiManagerEditRecipe : MonoBehaviour
     {
         ReloadPanelValues();
         InstantiateIngredients();
+        InstantiateInstructions();
     }
 
     public void ReloadPanelValues()
@@ -67,6 +68,15 @@ public class UiManagerEditRecipe : MonoBehaviour
             ddHours.SetValueWithoutNotify(hours);
             ddMinutes.SetValueWithoutNotify(minutes);
         }
+    }
+
+    public void AddNewIngredient()
+    {
+        StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlPostNewIngredient, "", "{}", returnValue =>
+        {
+            //Debug.Log(returnValue);
+            InstantiateIngredients();
+        }));
     }
 
     private void InstantiateIngredients()
@@ -120,6 +130,49 @@ public class UiManagerEditRecipe : MonoBehaviour
                 InstantiateIngredients();
             }));
         });
+    }
+
+    private void InstantiateInstructions()
+    {
+        foreach (Transform child in contentInstructionsObj.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (Instruction item in recipe.listInstructions)
+        {
+            InstantiateInstruction(item);
+        }
+    }
+
+    private void InstantiateInstruction(Instruction instruction)
+    {
+        GameObject obj = Instantiate(pfb_grp_instruction, contentInstructionsObj.transform);
+
+        InputField ifText = obj.transform.Find("if_InstructionText").GetComponent<InputField>();
+        ifText.text = instruction.text;
+
+        ifText.onEndEdit.AddListener(delegate
+        {
+            string json = "{\"text\" : \"" + ifText.text + "\"}";
+            //Debug.Log($"{recipe.id}/{instruction.id}");
+            StartCoroutine(dbManager.endpointsTools.PatchWithParam(API.urlUpdateInstruction, $"{recipe.id}/{instruction.id}", json, returnValue =>
+            {
+                Debug.Log(returnValue);
+            }));
+        });
+
+
+        obj.transform.Find("btn_delete").GetComponent<Button>().onClick.AddListener(delegate
+        {
+            Debug.Log($"{recipe.id}/{instruction.id}");
+            StartCoroutine(dbManager.endpointsTools.DeleteWithParam(API.urlDeleteInstruction, $"{recipe.id}/{instruction.id}", returnValue =>
+            {
+                //Debug.Log(returnValue);
+                InstantiateInstructions();
+            }));
+        });
+
     }
 
     public void UpdateRecipe()
