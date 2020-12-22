@@ -72,15 +72,26 @@ public class UiManagerEditRecipe : MonoBehaviour
 
     public void AddNewIngredient()
     {
-        StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlPostNewIngredient, "", "{}", returnValue =>
+        StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlPostNewIngredient, $"{recipe.id}", "{}", returnValue =>
         {
             //Debug.Log(returnValue);
             InstantiateIngredients();
         }));
     }
 
+    public void AddNewInstruction()
+    {
+        StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlPostNewInstruction, $"{recipe.id}", "{}", returnValue =>
+        {
+            //Debug.Log(returnValue);
+            InstantiateInstructions();
+        }));
+    }
+
     private void InstantiateIngredients()
     {
+        //TODO: get ingredients endpoint
+
         foreach (Transform child in contentIngredientsObj.transform)
         {
             Destroy(child.gameObject);
@@ -134,6 +145,8 @@ public class UiManagerEditRecipe : MonoBehaviour
 
     private void InstantiateInstructions()
     {
+        //TODO: get instructions endpoint
+
         foreach (Transform child in contentInstructionsObj.transform)
         {
             Destroy(child.gameObject);

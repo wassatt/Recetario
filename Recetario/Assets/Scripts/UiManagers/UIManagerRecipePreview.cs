@@ -40,7 +40,7 @@ public class UIManagerRecipePreview : MonoBehaviour
         if (recipe.difficulty < spritesDiff.Length)
             imgDifficulty.overrideSprite = spritesDiff[recipe.difficulty];
 
-        if (!string.IsNullOrEmpty(recipe.imageUrl))
+        if (!string.IsNullOrEmpty(recipe.imageUrl) && gameObject.activeInHierarchy)
         {
             StartCoroutine(dbManager.endpointsTools.GetImageCoroutine(recipe.imageUrl, returnValue =>
             {
