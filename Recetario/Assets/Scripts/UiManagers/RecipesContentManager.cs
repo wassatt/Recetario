@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using SimpleJSON;
+using UnityEngine.Events;
 
 public class RecipesContentManager : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class RecipesContentManager : MonoBehaviour
     private GameObject contentRecipesObj;
     [SerializeField]
     private GameObject pfb_grp_recipe_preview;
+    [SerializeField]
+    private UiManagerFullRecipe fullRecipe;
+
+    public UnityEvent onOpenFullRecipe;
 
     // Start is called before the first frame update
     void Start()
@@ -52,5 +57,12 @@ public class RecipesContentManager : MonoBehaviour
         UIManagerRecipePreview recipePreview = obj.GetComponent<UIManagerRecipePreview>();
         recipePreview.dbManager = dbManager;
         recipePreview.InitUiValues(recipeData.recipe);
+
+        obj.transform.Find("btn_OpenRecipe").GetComponent<Button>().onClick.AddListener(delegate {
+            fullRecipe.recipe = recipeData.recipe;
+            fullRecipe.dbManager = dbManager;
+            //open menu editor
+            onOpenFullRecipe.Invoke();
+        });
     }
 }
