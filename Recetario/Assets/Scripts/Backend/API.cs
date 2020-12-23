@@ -15,12 +15,14 @@
     public const string urlUpdateRecipe = urlApi + "/updateRecipe";
     public const string urlLikeRecipe = urlApi + "/likeRecipe";
     public const string urlDeleteRecipe = urlApi + "/deleteRecipe";
-
+    
+    public const string urlGetIngredients = urlApi + "/ingredients";
     public const string urlPostNewIngredient = urlApi + "/newIngredient";
     public const string urlUpdateIngredient = urlApi + "/updateIngredient";
     public const string urlDeleteIngredient = urlApi + "/deleteIngredient";
 
+    public const string urlGetInstructions = urlApi + "/instructions";
     public const string urlPostNewInstruction = urlApi + "/newInstruction";
-    public const string urlUpdateInstruction = urlApi + "/patchInstruction";
+    public const string urlUpdateInstruction = urlApi + "/updateInstruction";
     public const string urlDeleteInstruction = urlApi + "/deleteInstruction";
 }

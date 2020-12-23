@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SimpleJSON;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -90,17 +91,31 @@ public class UiManagerEditRecipe : MonoBehaviour
 
     private void InstantiateIngredients()
     {
-        //TODO: get ingredients endpoint
-
-        foreach (Transform child in contentIngredientsObj.transform)
+        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetIngredients, recipe.id, "", returnValue =>
         {
-            Destroy(child.gameObject);
-        }
+            //Debug.Log(returnValue);
+            var jsonString = JSON.Parse(returnValue);
+            recipe.listIngredients.Clear();
 
-        foreach (Ingredient item in recipe.listIngredients)
-        {
-            InstantiateIngredient(item);
-        }
+            foreach (JSONNode itemObj in jsonString)
+            {
+                string itemString = itemObj.ToString();
+                Ingredient item = JsonUtility.FromJson<Ingredient>(itemString);
+                recipe.listIngredients.Add(item);
+                //Debug.Log(itemString);
+            }
+
+            foreach (Transform child in contentIngredientsObj.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            foreach (Ingredient item in recipe.listIngredients)
+            {
+                InstantiateIngredient(item);
+            }
+
+        }));
     }
 
     private void InstantiateIngredient(Ingredient ingredient)
@@ -145,17 +160,30 @@ public class UiManagerEditRecipe : MonoBehaviour
 
     private void InstantiateInstructions()
     {
-        //TODO: get instructions endpoint
-
-        foreach (Transform child in contentInstructionsObj.transform)
+        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetInstructions, recipe.id, "", returnValue =>
         {
-            Destroy(child.gameObject);
-        }
+            //Debug.Log(returnValue);
+            var jsonString = JSON.Parse(returnValue);
+            recipe.listInstructions.Clear();
 
-        foreach (Instruction item in recipe.listInstructions)
-        {
-            InstantiateInstruction(item);
-        }
+            foreach (JSONNode itemObj in jsonString)
+            {
+                string itemString = itemObj.ToString();
+                Instruction item = JsonUtility.FromJson<Instruction>(itemString);
+                recipe.listInstructions.Add(item);
+                //Debug.Log(itemString);
+            }
+
+            foreach (Transform child in contentInstructionsObj.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            foreach (Instruction item in recipe.listInstructions)
+            {
+                InstantiateInstruction(item);
+            }
+        }));
     }
 
     private void InstantiateInstruction(Instruction instruction)
