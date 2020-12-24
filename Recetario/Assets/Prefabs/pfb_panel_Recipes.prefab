@@ -9016,6 +9016,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pfb_grp_recipe_preview
       objectReference: {fileID: 0}
+    - target: {fileID: 3298954136367682256, guid: 10022b304dcc35540ad8b46ac371f138,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907280986238364845, guid: 10022b304dcc35540ad8b46ac371f138,
         type: 3}
       propertyPath: m_LocalPosition.x
