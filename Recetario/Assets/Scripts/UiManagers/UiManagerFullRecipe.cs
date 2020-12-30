@@ -13,11 +13,14 @@ public class UiManagerFullRecipe : MonoBehaviour
     [SerializeField]
     private Image imgDifficulty;
     [SerializeField]
+    private Text txtLikes;
+    [SerializeField]
     private Text txtName;
     [SerializeField]
     private Text txtPrepTime;
     [SerializeField]
     private Text txtDescription;
+
 
     [SerializeField]
     private Sprite[] spritesDiff;
@@ -73,7 +76,12 @@ public class UiManagerFullRecipe : MonoBehaviour
             }));
         }
 
-        txtName.text = recipe.name;
+        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetLikes, recipe.id, "", returnValue =>
+        {
+            txtLikes.text = returnValue;
+        }));
+
+            txtName.text = recipe.name;
         txtDescription.text = recipe.description;
         if (!string.IsNullOrEmpty(recipe.prepTime))
         {

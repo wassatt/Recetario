@@ -2031,7 +2031,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Recipies,Main
+          m_StringArgument: Recipes,Main
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &2432042109061270364
@@ -5402,7 +5402,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Recipies,Categories
+          m_StringArgument: Recipes,Categories
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &3605122333839291875
@@ -6592,10 +6592,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.21493416, g: 0.6603774, b: 0.2493544, a: 1}
-    m_PressedColor: {r: 0.069419734, g: 0.3773585, b: 0.09394585, a: 1}
-    m_SelectedColor: {r: 0.07058824, g: 0.37647063, b: 0.09411766, a: 1}
-    m_DisabledColor: {r: 0.07058824, g: 0.37647063, b: 0.09411766, a: 0.5019608}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8133,7 +8133,7 @@ GameObject:
   - component: {fileID: 8201146784710543921}
   - component: {fileID: 8201146784710543920}
   m_Layer: 5
-  m_Name: pfb_panel_Recipies
+  m_Name: pfb_panel_Recipes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

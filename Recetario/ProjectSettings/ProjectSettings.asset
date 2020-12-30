@@ -257,7 +257,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Usuarios/Fede/Documentos/GitHub/Alquimia/Alquimia App/Keystore/user.keystore
+  AndroidKeystoreName: X:/Users/MachPlomo/Documents/GitHub/Alquimia/Alquimia App/Keystore/user.keystore
   AndroidKeyaliasName: recetario
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

@@ -14,6 +14,7 @@
     public const string urlPostRecipeImage = urlApi + "/uploadRecipeImage";
     public const string urlUpdateRecipe = urlApi + "/updateRecipe";
     public const string urlLikeRecipe = urlApi + "/likeRecipe";
+    public const string urlGetLikes = urlApi + "/likesCount";
     public const string urlDeleteRecipe = urlApi + "/deleteRecipe";
     
     public const string urlGetIngredients = urlApi + "/ingredients";
@@ -25,4 +26,8 @@
     public const string urlPostNewInstruction = urlApi + "/newInstruction";
     public const string urlUpdateInstruction = urlApi + "/updateInstruction";
     public const string urlDeleteInstruction = urlApi + "/deleteInstruction";
+
+    public const string urlGetFavorites = urlApi + "/favorites";
+    public const string urlAddFavorite = urlApi + "/newFavorite";
+    public const string urlDeleteFavorite = urlApi + "/deleteFavorite";
 }
