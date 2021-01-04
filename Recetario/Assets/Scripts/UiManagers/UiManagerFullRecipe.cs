@@ -62,6 +62,8 @@ public class UiManagerFullRecipe : MonoBehaviour
 
     public void InitUiValues(Recipe recipe)
     {
+        //TODO: Favorite button color
+
         if (recipe.difficulty < spritesDiff.Length)
             imgDifficulty.overrideSprite = spritesDiff[recipe.difficulty];
 
@@ -127,6 +129,15 @@ public class UiManagerFullRecipe : MonoBehaviour
         Text txtQty = obj.transform.Find("txt_Qty").GetComponent<Text>();
         txtQty.text = ingredient.qty;
 
+        Button addToCart = obj.transform.Find("btn_AddToCart").GetComponent<Button>();
+
+        if (txtQty.text.Equals("grp"))
+        {
+            txtQty.gameObject.SetActive(false);
+            addToCart.gameObject.SetActive(false);
+            txtName.text = "\n" + ingredient.name + "\n";
+        }
+
         //obj.transform.Find("btn_AddToCart").GetComponent<Button>().onClick.AddListener(delegate
         //{
         //    //Debug.Log($"{recipe.id}/{ingredient.id}");
@@ -174,6 +185,14 @@ public class UiManagerFullRecipe : MonoBehaviour
         //        InstantiateInstructions();
         //    }));
         //});
+    }
+
+    public void ToggleFavorite()
+    {
+        //get favorites 
+        //if exists delete favorite endpoint
+        //else add favorite endpoint
+
     }
 
     IEnumerator FixContentSize()

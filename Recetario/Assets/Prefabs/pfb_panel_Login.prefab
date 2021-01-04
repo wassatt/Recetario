@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 691970086794389655}
   - component: {fileID: 691970086794389649}
   - component: {fileID: 691970086794389648}
+  - component: {fileID: 1496413081}
   m_Layer: 5
   m_Name: pfb_panel_Login
   m_TagString: Untagged
@@ -442,6 +443,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1496413081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691970086794389654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d36978b69fc2b842999937c3041deea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userMail: {fileID: 8653506335718491023}
+  userPassword: {fileID: 8653506337040590191}
+  loginMail: {fileID: 11400000, guid: bf2562396a36ce245ae1796528144e25, type: 2}
+  loginPass: {fileID: 11400000, guid: 4172d60efa55d774dae8feac96bc3f4c, type: 2}
+  loginButton: {fileID: 691970086291794992}
 --- !u!1 &691970087511328202
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +726,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Usuario
+  m_Text: Correo
 --- !u!1 &1210012576812760580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,7 +1378,7 @@ GameObject:
   - component: {fileID: 8653506335718491022}
   - component: {fileID: 8653506335718491023}
   m_Layer: 5
-  m_Name: if_Name
+  m_Name: if_Mail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1723,7 +1741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.00053183705, y: 0.4999963}
   m_AnchorMax: {x: 0.99946743, y: 1.0005027}
-  m_AnchoredPosition: {x: -2.100006, y: 0.49993896}
+  m_AnchoredPosition: {x: -2.1000977, y: 0.49987793}
   m_SizeDelta: {x: 4.21, y: -1.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8653506336750174065

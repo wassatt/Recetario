@@ -133,7 +133,7 @@ public class UiManagerEditRecipe : MonoBehaviour
             //Debug.Log($"{recipe.id}/{ingredient.id}");
             StartCoroutine(dbManager.endpointsTools.PatchWithParam(API.urlUpdateIngredient, $"{recipe.id}/{ingredient.id}", json, returnValue =>
             {
-                Debug.Log(returnValue);
+                //Debug.Log(returnValue);
             }));
         });
 
@@ -143,7 +143,7 @@ public class UiManagerEditRecipe : MonoBehaviour
             //Debug.Log($"{recipe.id}/{ingredient.id}");
             StartCoroutine(dbManager.endpointsTools.PatchWithParam(API.urlUpdateIngredient, $"{recipe.id}/{ingredient.id}", json, returnValue =>
             {
-                Debug.Log(returnValue);
+                //Debug.Log(returnValue);
             }));
         });
 
@@ -199,7 +199,7 @@ public class UiManagerEditRecipe : MonoBehaviour
             //Debug.Log($"{recipe.id}/{instruction.id}");
             StartCoroutine(dbManager.endpointsTools.PatchWithParam(API.urlUpdateInstruction, $"{recipe.id}/{instruction.id}", json, returnValue =>
             {
-                Debug.Log(returnValue);
+                //Debug.Log(returnValue);
             }));
         });
 
