@@ -14,6 +14,8 @@ public class UiManagerFullRecipe : MonoBehaviour
     [SerializeField]
     private Image imgDifficulty;
     [SerializeField]
+    private Button btnLike;
+    [SerializeField]
     private Text txtLikes;
     [SerializeField]
     private Button btnFavorite;
@@ -81,10 +83,7 @@ public class UiManagerFullRecipe : MonoBehaviour
             }));
         }
 
-        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetLikes, recipe.id, "", returnValue =>
-        {
-            txtLikes.text = returnValue;
-        }));
+        GetLikes();
 
         txtName.text = recipe.name;
         txtDescription.text = recipe.description;
@@ -122,6 +121,21 @@ public class UiManagerFullRecipe : MonoBehaviour
         }));
 
         btnFavorite.onClick.AddListener(delegate { ToggleFavorite(); });
+        btnLike.onClick.AddListener(delegate {
+            StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlLikeRecipe, $"{recipe.id}/{AuthManager.currentUserId}", "{}", returnValue =>
+            {
+                //Debug.Log(returnValue);
+                GetLikes();
+            }));
+        });
+    }
+
+    private void GetLikes()
+    {
+        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetLikes, recipe.id, "", returnValue =>
+        {
+            txtLikes.text = returnValue;
+        }));
     }
 
     public void InstantiateIngredients()

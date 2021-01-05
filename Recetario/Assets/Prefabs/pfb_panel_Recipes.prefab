@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 211549298034983205}
   - component: {fileID: 211549298034983204}
   - component: {fileID: 211549298034983207}
+  - component: {fileID: 917566124206503003}
   m_Layer: 5
   m_Name: btn_Tartas
   m_TagString: Untagged
@@ -434,6 +435,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &917566124206503003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211549298034983201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 2
+  recipesContentManager: {fileID: 0}
 --- !u!1 &624973318003170424
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +772,7 @@ GameObject:
   - component: {fileID: 930917785228903881}
   - component: {fileID: 930917785228903886}
   - component: {fileID: 930917785228903887}
+  - component: {fileID: 4846349907466748581}
   m_Layer: 5
   m_Name: btn_Pan
   m_TagString: Untagged
@@ -864,6 +880,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4846349907466748581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930917785228903885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 9
+  recipesContentManager: {fileID: 0}
 --- !u!1 &930917785770637063
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +906,7 @@ GameObject:
   - component: {fileID: 930917785770637059}
   - component: {fileID: 930917785770637056}
   - component: {fileID: 930917785770637057}
+  - component: {fileID: 7340719051882228121}
   m_Layer: 5
   m_Name: btn_Gelatinas
   m_TagString: Untagged
@@ -983,6 +1014,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7340719051882228121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930917785770637063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 4
+  recipesContentManager: {fileID: 0}
 --- !u!1 &930917785889818165
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1040,7 @@ GameObject:
   - component: {fileID: 930917785889818161}
   - component: {fileID: 930917785889818166}
   - component: {fileID: 930917785889818167}
+  - component: {fileID: 5653650946982201570}
   m_Layer: 5
   m_Name: btn_Betunes
   m_TagString: Untagged
@@ -1102,6 +1148,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5653650946982201570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930917785889818165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 6
+  recipesContentManager: {fileID: 0}
 --- !u!1 &930917786135142152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1174,7 @@ GameObject:
   - component: {fileID: 930917786135142148}
   - component: {fileID: 930917786135142149}
   - component: {fileID: 930917786135142154}
+  - component: {fileID: 2009146052802209642}
   m_Layer: 5
   m_Name: btn_Flan
   m_TagString: Untagged
@@ -1221,6 +1282,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2009146052802209642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930917786135142152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 7
+  recipesContentManager: {fileID: 0}
 --- !u!1 &930917786472910317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1308,7 @@ GameObject:
   - component: {fileID: 930917786472910313}
   - component: {fileID: 930917786472910318}
   - component: {fileID: 930917786472910319}
+  - component: {fileID: 320307787009288604}
   m_Layer: 5
   m_Name: btn_Pies
   m_TagString: Untagged
@@ -1340,6 +1416,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &320307787009288604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930917786472910317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 3
+  recipesContentManager: {fileID: 0}
 --- !u!1 &930917786488930656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1442,7 @@ GameObject:
   - component: {fileID: 930917786488930588}
   - component: {fileID: 930917786488930589}
   - component: {fileID: 930917786488930658}
+  - component: {fileID: 4918343902643388313}
   m_Layer: 5
   m_Name: btn_Panques
   m_TagString: Untagged
@@ -1459,6 +1550,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4918343902643388313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930917786488930656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 1
+  recipesContentManager: {fileID: 0}
 --- !u!1 &930917786661834589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1576,7 @@ GameObject:
   - component: {fileID: 930917786661834585}
   - component: {fileID: 930917786661834590}
   - component: {fileID: 930917786661834591}
+  - component: {fileID: 5466814659223452854}
   m_Layer: 5
   m_Name: btn_Salsas
   m_TagString: Untagged
@@ -1578,6 +1684,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5466814659223452854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930917786661834589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 8
+  recipesContentManager: {fileID: 0}
 --- !u!1 &1184471748468512360
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,8 +3746,9 @@ GameObject:
   - component: {fileID: 3384604469292262993}
   - component: {fileID: 3384604469292262994}
   - component: {fileID: 3384604469292262995}
+  - component: {fileID: 7538990134231761660}
   m_Layer: 5
-  m_Name: btn_Flan
+  m_Name: btn_Dulces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3733,6 +3854,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7538990134231761660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384604469292262989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 10
+  recipesContentManager: {fileID: 0}
 --- !u!1 &3384604469320972631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,8 +4930,9 @@ GameObject:
   - component: {fileID: 3384604470302791543}
   - component: {fileID: 3384604470302791536}
   - component: {fileID: 3384604470302791537}
+  - component: {fileID: 4182982983850628498}
   m_Layer: 5
-  m_Name: btn_Salsas
+  m_Name: btn_Galletas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4902,6 +5038,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4182982983850628498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384604470302791539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 11
+  recipesContentManager: {fileID: 0}
 --- !u!1 &3384604470323210787
 GameObject:
   m_ObjectHideFlags: 0
@@ -5778,6 +5928,7 @@ GameObject:
   - component: {fileID: 4277658544405756607}
   - component: {fileID: 4277658544405756606}
   - component: {fileID: 4277658544405757249}
+  - component: {fileID: 8259003312081869465}
   m_Layer: 5
   m_Name: btn_Pasteles
   m_TagString: Untagged
@@ -5885,6 +6036,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8259003312081869465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277658544405757251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 0
+  recipesContentManager: {fileID: 0}
 --- !u!1 &4455039998082624258
 GameObject:
   m_ObjectHideFlags: 0
@@ -6613,7 +6778,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5220564448193302330}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: GetResRecipes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5285554221917460292
 GameObject:
   m_ObjectHideFlags: 0
@@ -8014,6 +8190,7 @@ GameObject:
   - component: {fileID: 7665377988621869581}
   - component: {fileID: 7665377988621869580}
   - component: {fileID: 7665377988621869579}
+  - component: {fileID: 3506660199454474591}
   m_Layer: 5
   m_Name: btn_Mousse
   m_TagString: Untagged
@@ -8121,6 +8298,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3506660199454474591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665377988621869577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 5
+  recipesContentManager: {fileID: 0}
 --- !u!1 &8201146784710543926
 GameObject:
   m_ObjectHideFlags: 0

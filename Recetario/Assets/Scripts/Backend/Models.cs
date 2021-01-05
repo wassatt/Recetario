@@ -66,9 +66,10 @@ public class CartItem
 
 public static class Categories
 {
-    static string[] categories = new string[] { "Pasteles", "Panqués", "Tartas",
-        "Pies", "Gelatinas", "Mousse","Betunes","Flan","Salsas",
-        "Pan", "Dulces", "Galletas" };
+    static string[] categories = new string[] 
+        { "Pasteles", "Panqués", "Tartas", "Pies",
+           "Gelatinas", "Mousse","Betunes","Flan",
+           "Salsas", "Pan", "Dulces", "Galletas" };
 
     public static string GetCategoryString(int category)
     {

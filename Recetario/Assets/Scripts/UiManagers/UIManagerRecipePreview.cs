@@ -64,25 +64,28 @@ public class UIManagerRecipePreview : MonoBehaviour
             txtPrepTime.text = $"{GetHoursOptions(hours)} {GetMinutesOptions(minutes)}";
         }
 
-        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetFavorites, AuthManager.currentUserId, "", returnValue =>
+        if (imgIsFavorite != null)
         {
-            //Debug.Log(returnValue);
-            var jsonString = JSON.Parse(returnValue);
-            imgIsFavorite.SetActive(false);
-
-            foreach (JSONNode obj in jsonString)
+            StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetFavorites, AuthManager.currentUserId, "", returnValue =>
             {
-                string objString = obj.ToString();
-                //Debug.Log(objString);
-                var child = JSON.Parse(objString);
-                var favoriteId = child["recipeId"].Value;
-                //Debug.Log(favoriteId);
+                //Debug.Log(returnValue);
+                var jsonString = JSON.Parse(returnValue);
+                imgIsFavorite.SetActive(false);
 
-                if (favoriteId == recipe.id)
+                foreach (JSONNode obj in jsonString)
                 {
-                    imgIsFavorite.SetActive(true);
+                    string objString = obj.ToString();
+                    //Debug.Log(objString);
+                    var child = JSON.Parse(objString);
+                    var favoriteId = child["recipeId"].Value;
+                    //Debug.Log(favoriteId);
+
+                    if (favoriteId == recipe.id)
+                    {
+                        imgIsFavorite.SetActive(true);
+                    }
                 }
-            }
-        }));
+            }));
+        }
     }
 }
