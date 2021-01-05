@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SimpleJSON;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class UIManagerRecipePreview : MonoBehaviour
     private Image imgDish;
     [SerializeField]
     private Image imgDifficulty;
+    [SerializeField]
+    private GameObject imgIsFavorite;
     [SerializeField]
     private Text txtName;
     [SerializeField]
@@ -60,5 +63,26 @@ public class UIManagerRecipePreview : MonoBehaviour
 
             txtPrepTime.text = $"{GetHoursOptions(hours)} {GetMinutesOptions(minutes)}";
         }
+
+        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetFavorites, AuthManager.currentUserId, "", returnValue =>
+        {
+            //Debug.Log(returnValue);
+            var jsonString = JSON.Parse(returnValue);
+            imgIsFavorite.SetActive(false);
+
+            foreach (JSONNode obj in jsonString)
+            {
+                string objString = obj.ToString();
+                //Debug.Log(objString);
+                var child = JSON.Parse(objString);
+                var favoriteId = child["recipeId"].Value;
+                //Debug.Log(favoriteId);
+
+                if (favoriteId == recipe.id)
+                {
+                    imgIsFavorite.SetActive(true);
+                }
+            }
+        }));
     }
 }

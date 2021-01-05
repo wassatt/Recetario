@@ -86,7 +86,6 @@ public class RecipesContentManager : MonoBehaviour
             fullRecipe.InstantiateIngredients();
             fullRecipe.InstantiateInstructions();
 
-
             onOpenFullRecipe.Invoke();
         });
     }

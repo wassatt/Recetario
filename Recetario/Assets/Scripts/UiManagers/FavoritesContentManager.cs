@@ -72,36 +72,6 @@ public class FavoritesContentManager : MonoBehaviour
                     InstantiatRecipePreview(recipe);
                 }));
             }
-            //foreach (JSONNode obj in jsonString)
-            //{
-            //    string objString = obj.ToString();
-            //    //Debug.Log(objString);
-            //    recipe = JsonUtility.FromJson<Recipe>(objString);
-            //    recipe.listIngredients.Clear();
-
-            //    var jsonObj = JSON.Parse(objString);
-            //    var ingredients = jsonObj["ingredients"];
-
-            //    foreach (JSONNode itemObj in ingredients)
-            //    {
-            //        string itemString = itemObj.ToString();
-            //        Ingredient item = JsonUtility.FromJson<Ingredient>(itemString);
-            //        recipe.listIngredients.Add(item);
-            //        //Debug.Log(itemString);
-            //    }
-
-            //    var instructions = jsonObj["instructions"];
-
-            //    foreach (JSONNode itemObj in instructions)
-            //    {
-            //        string itemString = itemObj.ToString();
-            //        Instruction item = JsonUtility.FromJson<Instruction>(itemString);
-            //        recipe.listInstructions.Add(item);
-            //        //Debug.Log(itemString);
-            //    }
-
-            //    InstantiatRecipePreview(recipe);
-            //}
         }));
     }
 
@@ -119,7 +89,6 @@ public class FavoritesContentManager : MonoBehaviour
             fullRecipe.dbManager = dbManager;
             fullRecipe.InstantiateIngredients();
             fullRecipe.InstantiateInstructions();
-
 
             onOpenFullRecipe.Invoke();
         });

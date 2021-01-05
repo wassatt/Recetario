@@ -16,6 +16,8 @@ public class UiManagerFullRecipe : MonoBehaviour
     [SerializeField]
     private Text txtLikes;
     [SerializeField]
+    private Button btnFavorite;
+    [SerializeField]
     private GameObject imgIsFavorite;
     [SerializeField]
     private Text txtName;
@@ -65,8 +67,6 @@ public class UiManagerFullRecipe : MonoBehaviour
 
     public void InitUiValues(Recipe recipe)
     {
-        //TODO: Favorite button color
-
         if (recipe.difficulty < spritesDiff.Length)
             imgDifficulty.overrideSprite = spritesDiff[recipe.difficulty];
 
@@ -101,6 +101,7 @@ public class UiManagerFullRecipe : MonoBehaviour
         {
             //Debug.Log(returnValue);
             var jsonString = JSON.Parse(returnValue);
+            btnFavorite.interactable = false;
             imgIsFavorite.SetActive(false);
 
             foreach (JSONNode obj in jsonString)
@@ -116,7 +117,11 @@ public class UiManagerFullRecipe : MonoBehaviour
                     imgIsFavorite.SetActive(true);
                 }
             }
+
+            btnFavorite.interactable = true;
         }));
+
+        btnFavorite.onClick.AddListener(delegate { ToggleFavorite(); });
     }
 
     public void InstantiateIngredients()
@@ -213,10 +218,24 @@ public class UiManagerFullRecipe : MonoBehaviour
 
     public void ToggleFavorite()
     {
-        //get favorites 
-        //if exists delete favorite endpoint
-        //else add favorite endpoint
-
+        btnFavorite.interactable = false;
+        if (!imgIsFavorite.activeInHierarchy)
+        {
+            StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlAddFavorite, $"{AuthManager.currentUserId}/{recipe.id}", "{}", returnValue =>
+            {
+                //Debug.Log(returnValue);
+                btnFavorite.interactable = true;
+                imgIsFavorite.SetActive(true);
+            }));
+        } else
+        {
+            StartCoroutine(dbManager.endpointsTools.DeleteWithParam(API.urlDeleteFavorite, $"{AuthManager.currentUserId}/{recipe.id}", returnValue =>
+            {
+                //Debug.Log(returnValue);
+                btnFavorite.interactable = true;
+                imgIsFavorite.SetActive(false);
+            }));
+        }
     }
 
     IEnumerator FixContentSize()
