@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1391346848456448460}
   - component: {fileID: 1391346848456448462}
   - component: {fileID: 1391346848456448461}
+  - component: {fileID: 1391346849020125554}
   m_Layer: 5
   m_Name: pfb_panel_Shopping_List
   m_TagString: Untagged
@@ -74,6 +75,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1391346849020125554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391346848456448451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c06a2ba3321214ee987d6dfe36636a78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dbManager: {fileID: 0}
+  contentCartObj: {fileID: 8941997284711928104}
+  pfb_grp_CartItem: {fileID: 2559336496892424607, guid: 6d88c29c5f47e43eea579dee2aa353d6,
+    type: 3}
+  layoutGroup: {fileID: 8375000624846946217}
 --- !u!1 &2497618791246934311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,10 +1099,10 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 40
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0

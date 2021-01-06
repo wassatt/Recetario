@@ -18,10 +18,10 @@ public class FavoritesContentManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GetResRecipes();
+        GetRecipes();
     }
 
-    public void GetResRecipes()
+    public void GetRecipes()
     {
         foreach (Transform child in contentRecipesObj.transform)
         {
@@ -69,13 +69,13 @@ public class FavoritesContentManager : MonoBehaviour
                         //Debug.Log(itemString);
                     }
 
-                    InstantiatRecipePreview(recipe);
+                    InstantiateRecipePreview(recipe);
                 }));
             }
         }));
     }
 
-    private void InstantiatRecipePreview(Recipe recipe)
+    private void InstantiateRecipePreview(Recipe recipe)
     {
         GameObject obj = Instantiate(pfb_grp_recipe_preview, contentRecipesObj.transform);
         RecipeData recipeData = obj.GetComponent<RecipeData>();

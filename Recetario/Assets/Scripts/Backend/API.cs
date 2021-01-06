@@ -18,6 +18,7 @@
     public const string urlDeleteRecipe = urlApi + "/deleteRecipe";
     
     public const string urlGetIngredients = urlApi + "/ingredients";
+    public const string urlGetIngredient = urlApi + "/ingredient";
     public const string urlPostNewIngredient = urlApi + "/newIngredient";
     public const string urlUpdateIngredient = urlApi + "/updateIngredient";
     public const string urlDeleteIngredient = urlApi + "/deleteIngredient";
