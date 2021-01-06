@@ -181,15 +181,13 @@ public class UiManagerFullRecipe : MonoBehaviour
             txtName.text = "\n" + ingredient.name + "\n";
         }
 
-        //obj.transform.Find("btn_AddToCart").GetComponent<Button>().onClick.AddListener(delegate
-        //{
-        //    //Debug.Log($"{recipe.id}/{ingredient.id}");
-        //    StartCoroutine(dbManager.endpointsTools.DeleteWithParam(API.urlDeleteIngredient, $"{recipe.id}/{ingredient.id}", returnValue =>
-        //    {
-        //        //Debug.Log(returnValue);
-        //        InstantiateIngredients();
-        //    }));
-        //});
+        obj.transform.Find("btn_AddToCart").GetComponent<Button>().onClick.AddListener(delegate
+        {
+            StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlAddToCart, $"{AuthManager.currentUserId}/{recipe.id}/{ingredient.id}", "{}", returnValue =>
+            {
+                Debug.Log(returnValue);
+            }));
+        });
     }
 
     public void InstantiateInstructions()

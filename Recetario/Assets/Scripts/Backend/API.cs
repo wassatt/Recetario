@@ -32,4 +32,8 @@
     public const string urlDeleteFavorite = urlApi + "/deleteFavorite";
 
     public const string urlGetRecipesSearch = urlApi + "/search";
+
+    public const string urlGetCart = urlApi + "/cart";
+    public const string urlAddToCart = urlApi + "/newCartItem";
+    public const string urlDeleteCartItem = urlApi + "/deleteCartItem";
 }
