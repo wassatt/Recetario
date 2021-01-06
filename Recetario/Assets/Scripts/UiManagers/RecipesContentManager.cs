@@ -175,7 +175,7 @@ public class RecipesContentManager : MonoBehaviour
         GameObject obj = Instantiate(pfb_grp_recipe_preview, contentRecipesObj.transform);
         RecipeData recipeData = obj.GetComponent<RecipeData>();
         recipeData.recipe = recipe;
-        UIManagerRecipePreview recipePreview = obj.GetComponent<UIManagerRecipePreview>();
+        UiManagerRecipePreview recipePreview = obj.GetComponent<UiManagerRecipePreview>();
         recipePreview.dbManager = dbManager;
         recipePreview.InitUiValues(recipeData.recipe);
 

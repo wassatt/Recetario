@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManagerRecipePreview : MonoBehaviour
+public class UiManagerRecipePreview : MonoBehaviour
 {
     public DataBaseManager dbManager;
     [SerializeField]
