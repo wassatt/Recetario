@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 59840528078805945}
   - component: {fileID: 59840528078805946}
   - component: {fileID: 59840528078805947}
+  - component: {fileID: 5689870808638064872}
   m_Layer: 5
   m_Name: btn_Flan
   m_TagString: Untagged
@@ -32,7 +33,7 @@ RectTransform:
   m_Children:
   - {fileID: 537458398935012016}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -119,6 +120,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5689870808638064872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59840528078805925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 7
+  recipesContentManager: {fileID: 0}
 --- !u!1 &59840528376812716
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +223,7 @@ GameObject:
   - component: {fileID: 59840529089342111}
   - component: {fileID: 59840529089342104}
   - component: {fileID: 59840529089342105}
+  - component: {fileID: 8397415375195835080}
   m_Layer: 5
   m_Name: btn_Salsas
   m_TagString: Untagged
@@ -228,7 +244,7 @@ RectTransform:
   m_Children:
   - {fileID: 7879735629189786591}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -315,6 +331,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8397415375195835080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59840529089342107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 8
+  recipesContentManager: {fileID: 0}
 --- !u!1 &211549298034983201
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +491,7 @@ GameObject:
   - component: {fileID: 2024978755189864179}
   - component: {fileID: 2572176616845528253}
   - component: {fileID: 8938309136857044855}
+  - component: {fileID: 4345752901058011308}
   m_Layer: 5
   m_Name: btn_Mousses
   m_TagString: Untagged
@@ -481,7 +512,7 @@ RectTransform:
   m_Children:
   - {fileID: 1088481129511572235}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -568,6 +599,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4345752901058011308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624973318003170424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 5
+  recipesContentManager: {fileID: 0}
 --- !u!1 &746149458974004825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1845,7 @@ GameObject:
   - component: {fileID: 1545109303053666135}
   - component: {fileID: 1545109303053666134}
   - component: {fileID: 1545109303053664425}
+  - component: {fileID: 822019289240013220}
   m_Layer: 5
   m_Name: btn_Pasteles
   m_TagString: Untagged
@@ -1907,6 +1953,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &822019289240013220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545109303053664427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 0
+  recipesContentManager: {fileID: 0}
 --- !u!1 &2064920629658879310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,6 +1979,7 @@ GameObject:
   - component: {fileID: 4307159491034071001}
   - component: {fileID: 5124681121929094371}
   - component: {fileID: 6016939116828074055}
+  - component: {fileID: 3138685000160639755}
   m_Layer: 5
   m_Name: btn_Galletas
   m_TagString: Untagged
@@ -1939,7 +2000,7 @@ RectTransform:
   m_Children:
   - {fileID: 1109438628357703775}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2026,6 +2087,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3138685000160639755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064920629658879310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 11
+  recipesContentManager: {fileID: 0}
 --- !u!1 &2376877959550018993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,10 +2306,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pies
-
-
-'
+  m_Text: Pies
 --- !u!114 &2621104198575585389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2261,6 +2333,7 @@ GameObject:
   - component: {fileID: 2506068176410888939}
   - component: {fileID: 2506068176410888936}
   - component: {fileID: 2506068176410888937}
+  - component: {fileID: 1436986835928375239}
   m_Layer: 5
   m_Name: btn_Gelatinas
   m_TagString: Untagged
@@ -2281,7 +2354,7 @@ RectTransform:
   m_Children:
   - {fileID: 1079480593308042876}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2368,6 +2441,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1436986835928375239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506068176410888943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 4
+  recipesContentManager: {fileID: 0}
 --- !u!1 &2506068176945281061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,6 +2467,7 @@ GameObject:
   - component: {fileID: 2506068176945281057}
   - component: {fileID: 2506068176945281062}
   - component: {fileID: 2506068176945281063}
+  - component: {fileID: 2927928580125176243}
   m_Layer: 5
   m_Name: btn_Pan
   m_TagString: Untagged
@@ -2400,7 +2488,7 @@ RectTransform:
   m_Children:
   - {fileID: 6712927585968184545}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2487,6 +2575,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2927928580125176243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506068176945281061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 9
+  recipesContentManager: {fileID: 0}
 --- !u!1 &2506068177668439176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,6 +2601,7 @@ GameObject:
   - component: {fileID: 2506068177668439284}
   - component: {fileID: 2506068177668439285}
   - component: {fileID: 2506068177668439178}
+  - component: {fileID: 3580821223569622919}
   m_Layer: 5
   m_Name: btn_Panques
   m_TagString: Untagged
@@ -2606,6 +2709,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3580821223569622919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506068177668439176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 1
+  recipesContentManager: {fileID: 0}
 --- !u!1 &2506068177719259141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +2735,7 @@ GameObject:
   - component: {fileID: 2506068177719259137}
   - component: {fileID: 2506068177719259142}
   - component: {fileID: 2506068177719259143}
+  - component: {fileID: 224530377942957662}
   m_Layer: 5
   m_Name: btn_Pies
   m_TagString: Untagged
@@ -2638,7 +2756,7 @@ RectTransform:
   m_Children:
   - {fileID: 233357809411450072}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2725,6 +2843,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &224530377942957662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506068177719259141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 3
+  recipesContentManager: {fileID: 0}
 --- !u!1 &2506068178142772189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2869,7 @@ GameObject:
   - component: {fileID: 2506068178142772185}
   - component: {fileID: 2506068178142772190}
   - component: {fileID: 2506068178142772191}
+  - component: {fileID: 566246955198796736}
   m_Layer: 5
   m_Name: btn_Betunes
   m_TagString: Untagged
@@ -2757,7 +2890,7 @@ RectTransform:
   m_Children:
   - {fileID: 6446662699031763503}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2844,6 +2977,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &566246955198796736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506068178142772189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 6
+  recipesContentManager: {fileID: 0}
 --- !u!1 &2606562347690379735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,6 +3003,7 @@ GameObject:
   - component: {fileID: 7020637668977033582}
   - component: {fileID: 131460129962228738}
   - component: {fileID: 4962604999157596822}
+  - component: {fileID: 6540509750678317741}
   m_Layer: 5
   m_Name: btn_Dulces
   m_TagString: Untagged
@@ -2876,7 +3024,7 @@ RectTransform:
   m_Children:
   - {fileID: 7291214762514553234}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2963,6 +3111,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6540509750678317741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606562347690379735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 10
+  recipesContentManager: {fileID: 0}
 --- !u!1 &2773160838574406225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6219,10 +6381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Flan
-
-
-'
+  m_Text: Flan
 --- !u!114 &1589269138656059085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6780,7 +6939,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: GetResRecipes
+        m_MethodName: GetRecipes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6826,6 +6985,7 @@ RectTransform:
   - {fileID: 8502196553615373848}
   - {fileID: 1545109303053664424}
   - {fileID: 2506068177668439179}
+  - {fileID: 6521414418278972839}
   - {fileID: 2506068177719259140}
   - {fileID: 2506068176410888942}
   - {fileID: 4603367476597630931}
@@ -6920,6 +7080,140 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
+--- !u!1 &5477633084555716058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6521414418278972839}
+  - component: {fileID: 7347918428951856561}
+  - component: {fileID: 853896935144767396}
+  - component: {fileID: 3110480471384778779}
+  - component: {fileID: 6237657231019182425}
+  m_Layer: 5
+  m_Name: btn_Tartas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6521414418278972839
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477633084555716058}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5680196589850708037}
+  m_Father: {fileID: 5285554221917460293}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 516.35004, y: -25}
+  m_SizeDelta: {x: 77.3, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7347918428951856561
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477633084555716058}
+  m_CullTransparentMesh: 0
+--- !u!114 &853896935144767396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477633084555716058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -7684511121135882677, guid: d0430c857ccd6ab44889169c90914877,
+    type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 0.6
+--- !u!114 &3110480471384778779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477633084555716058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.019607844, g: 0.42745098, b: 0.34901962, a: 1}
+    m_HighlightedColor: {r: 0.04463333, g: 0.5566038, b: 0.4581479, a: 1}
+    m_PressedColor: {r: 0.016064432, g: 0.1792453, b: 0.14786436, a: 1}
+    m_SelectedColor: {r: 0.015686275, g: 0.18039216, b: 0.14901961, a: 1}
+    m_DisabledColor: {r: 0.015686275, g: 0.18039216, b: 0.14901961, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 853896935144767396}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6237657231019182425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477633084555716058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf1d6c030b95478c419b14c6dc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 2
+  recipesContentManager: {fileID: 0}
 --- !u!1 &5691211377113738661
 GameObject:
   m_ObjectHideFlags: 0
@@ -7342,9 +7636,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Panques
-
-'
+  m_Text: Panques
 --- !u!114 &2114727384834031721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8965,7 +9257,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8502196553615373854}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: GetRecipes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8888409694618462280
 GameObject:
   m_ObjectHideFlags: 0
@@ -9072,7 +9375,7 @@ RectTransform:
   m_Children:
   - {fileID: 3384604470114307418}
   m_Father: {fileID: 5285554221917460293}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -9195,6 +9498,98 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &9153370382192654726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5680196589850708037}
+  - component: {fileID: 6720222973996197271}
+  - component: {fileID: 7397718264113150177}
+  - component: {fileID: 5034396882214603451}
+  m_Layer: 5
+  m_Name: txt_name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5680196589850708037
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153370382192654726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6521414418278972839}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -40.637848, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6720222973996197271
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153370382192654726}
+  m_CullTransparentMesh: 0
+--- !u!114 &7397718264113150177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153370382192654726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: db4a5d0d525abaf47ba8464d55e320ef, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Tartas
+--- !u!114 &5034396882214603451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153370382192654726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
 --- !u!1001 &4507844998753694908
 PrefabInstance:
   m_ObjectHideFlags: 0

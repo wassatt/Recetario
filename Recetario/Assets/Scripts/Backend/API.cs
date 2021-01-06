@@ -30,4 +30,6 @@
     public const string urlGetFavorites = urlApi + "/favorites";
     public const string urlAddFavorite = urlApi + "/newFavorite";
     public const string urlDeleteFavorite = urlApi + "/deleteFavorite";
+
+    public const string urlGetRecipesSearch = urlApi + "/search";
 }

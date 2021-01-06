@@ -22,10 +22,58 @@ public class RecipesContentManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetResRecipes();
+        GetRecipes();
     }
 
-    public void GetResRecipes()
+    public void GetRecipesBySearch()
+    {
+        foreach (Transform child in contentRecipesObj.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        Recipe recipe = new Recipe();
+
+        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlGetRecipesSearch, ifSearch.text, "", returnValue =>
+        {
+            //Debug.Log(returnValue);
+            var jsonString = JSON.Parse(returnValue);
+            onSearchDone.Invoke();
+
+            foreach (JSONNode obj in jsonString)
+            {
+                string objString = obj.ToString();
+                //Debug.Log(objString);
+                recipe = JsonUtility.FromJson<Recipe>(objString);
+                recipe.listIngredients.Clear();
+
+                var jsonObj = JSON.Parse(objString);
+                var ingredients = jsonObj["ingredients"];
+
+                foreach (JSONNode itemObj in ingredients)
+                {
+                    string itemString = itemObj.ToString();
+                    Ingredient item = JsonUtility.FromJson<Ingredient>(itemString);
+                    recipe.listIngredients.Add(item);
+                    //Debug.Log(itemString);
+                }
+
+                var instructions = jsonObj["instructions"];
+
+                foreach (JSONNode itemObj in instructions)
+                {
+                    string itemString = itemObj.ToString();
+                    Instruction item = JsonUtility.FromJson<Instruction>(itemString);
+                    recipe.listInstructions.Add(item);
+                    //Debug.Log(itemString);
+                }
+
+                InstantiatRecipePreview(recipe);
+            }
+        }));
+    }
+
+    public void GetRecipes()
     {
         foreach (Transform child in contentRecipesObj.transform)
         {
