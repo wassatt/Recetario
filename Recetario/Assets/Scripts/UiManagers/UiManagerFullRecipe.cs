@@ -185,7 +185,7 @@ public class UiManagerFullRecipe : MonoBehaviour
         {
             StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlAddToCart, $"{AuthManager.currentUserId}/{recipe.id}/{ingredient.id}", "{}", returnValue =>
             {
-                Debug.Log(returnValue);
+                //Debug.Log(returnValue);
             }));
         });
     }
