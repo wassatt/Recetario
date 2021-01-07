@@ -9,7 +9,6 @@ public class UserData
     public string imageUrl;
     public string name;
     public List<Favorite> listFavorites;
-    public List<CartItem> listCart;
 
     public UserData() { }
 }
@@ -58,10 +57,12 @@ public class Favorite
 }
 
 [Serializable]
-public class CartItem
+public class Promo
 {
-    public string ingredientId;
-    public CartItem() { }
+    public string id;
+    public string imageUrl;
+    public string url;
+    public Promo() { }
 }
 
 public static class Categories

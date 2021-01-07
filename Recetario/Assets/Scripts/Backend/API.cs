@@ -32,9 +32,17 @@
     public const string urlAddFavorite = urlApi + "/newFavorite";
     public const string urlDeleteFavorite = urlApi + "/deleteFavorite";
 
-    public const string urlGetRecipesSearch = urlApi + "/search";
-
     public const string urlGetCart = urlApi + "/cart";
     public const string urlAddToCart = urlApi + "/newCartItem";
     public const string urlDeleteCartItem = urlApi + "/deleteCartItem";
+
+    public const string urlGetPromos = urlApi + "/promotions";
+    public const string urlGetPromo = urlApi + "/promotion";
+    public const string urlPostNewPromo = urlApi + "/newPromotion";
+    public const string urlPostPromoImage = urlApi + "/uploadPromotionImage";
+    public const string urlUpdatePromo = urlApi + "/updatePromotion";
+    public const string urlDeletePromo = urlApi + "/deletePromotion";
+
+    public const string urlGetRecipesSearch = urlApi + "/search";
+    public const string urlIsAdmin = urlApi + "/isAdmin";
 }

@@ -19,7 +19,7 @@ public class RecipesContentManagerAdmin : MonoBehaviour
 
     private void OnEnable()
     {
-        GetResRecipes();
+        GetRecipes();
     }
 
     public void AddNewRecipe()
@@ -27,11 +27,11 @@ public class RecipesContentManagerAdmin : MonoBehaviour
         StartCoroutine(dbManager.endpointsTools.PostJsonWithParam(API.urlPostNewRecipe, "", "{}", returnValue =>
         {
             //Debug.Log(returnValue);
-            GetResRecipes();
+            GetRecipes();
         }));
     }
 
-    private void GetResRecipes()
+    private void GetRecipes()
     {
         foreach (Transform child in contentRecipesObj.transform)
         {
@@ -73,12 +73,12 @@ public class RecipesContentManagerAdmin : MonoBehaviour
                     //Debug.Log(itemString);
                 }
 
-                InstantiatRecipePreview(recipe);
+                InstantiateRecipePreview(recipe);
             }
         }));
     }
 
-    private void InstantiatRecipePreview(Recipe recipe)
+    private void InstantiateRecipePreview(Recipe recipe)
     {
         GameObject obj = Instantiate(pfb_grp_recipe_preview, contentRecipesObj.transform);
         RecipeData recipeData = obj.GetComponent<RecipeData>();
@@ -99,7 +99,7 @@ public class RecipesContentManagerAdmin : MonoBehaviour
             StartCoroutine(dbManager.endpointsTools.DeleteWithParam(API.urlDeleteRecipe, recipeData.recipe.id, returnValue =>
             {
                 //Debug.Log(returnValue);
-                GetResRecipes();
+                GetRecipes();
             }));
         });
     }
