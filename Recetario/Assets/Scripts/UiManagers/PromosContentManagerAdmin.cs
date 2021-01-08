@@ -11,8 +11,8 @@ public class PromosContentManagerAdmin : MonoBehaviour
     private GameObject contentPromosObj;
     [SerializeField]
     private GameObject pfb_grp_promo_preview;
-    //[SerializeField]
-    //private UiManagerEditRecipe editPanel;
+    [SerializeField]
+    private UiManagerEditPromo editPanel;
 
     [SerializeField]
     private UnityEvent onEditPromo;
@@ -68,8 +68,8 @@ public class PromosContentManagerAdmin : MonoBehaviour
 
         obj.transform.Find("btn_edit").GetComponent<Button>().onClick.AddListener(delegate
         {
-            //editPanel.recipe = recipeData.recipe;
-            //editPanel.dbManager = dbManager;
+            editPanel.promo = promo;
+            editPanel.dbManager = dbManager;
             //open menu editor
             onEditPromo.Invoke();
         });

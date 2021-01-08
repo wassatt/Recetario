@@ -2179,8 +2179,9 @@ GameObject:
   - component: {fileID: 263774832139972826}
   - component: {fileID: 263774832139972827}
   - component: {fileID: 263774832139972820}
+  - component: {fileID: 5707955688002654861}
   m_Layer: 5
-  m_Name: panel_AddPromo
+  m_Name: panel_EditPromo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2278,6 +2279,25 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5707955688002654861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263774832139972822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cfe1f506a2239744ba9fa55ff9d0d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dbManager: {fileID: 0}
+  promo:
+    id: 
+    imageUrl: 
+    url: 
+  imgPromo: {fileID: 4948868228709664935}
+  ifUrl: {fileID: 4948868229940270034}
 --- !u!1 &564793435427529256
 GameObject:
   m_ObjectHideFlags: 0
@@ -7121,6 +7141,7 @@ MonoBehaviour:
   contentPromosObj: {fileID: 8872186383384498319}
   pfb_grp_promo_preview: {fileID: 5582319188494142898, guid: 6c7a9fabbc4edd24fb017fe2b955a77e,
     type: 3}
+  editPanel: {fileID: 5707955688002654861}
   onEditPromo:
     m_PersistentCalls:
       m_Calls:
@@ -11797,7 +11818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -14386,7 +14407,7 @@ GameObject:
   - component: {fileID: 4948868229940270035}
   - component: {fileID: 4948868229940270034}
   m_Layer: 5
-  m_Name: if_Receta
+  m_Name: if_Url
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15258,7 +15279,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Escribe algo...
+  m_Text: Escribe enlace...
 --- !u!1 &4948868230280588970
 GameObject:
   m_ObjectHideFlags: 0
