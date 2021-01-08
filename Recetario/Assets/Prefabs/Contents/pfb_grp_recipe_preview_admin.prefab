@@ -664,6 +664,7 @@ MonoBehaviour:
   dbManager: {fileID: 0}
   imgDish: {fileID: 6629630005956859692}
   imgDifficulty: {fileID: 6629630005052269472}
+  imgIsFavorite: {fileID: 0}
   txtName: {fileID: 132919011357239475}
   txtPrepTime: {fileID: 6629630005079144369}
   txtDescription: {fileID: 6629630005659496105}

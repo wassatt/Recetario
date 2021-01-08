@@ -1773,7 +1773,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5995235640869656593}
+  - {fileID: 6958723546783618687}
   m_Father: {fileID: 4804451552177593198}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9601,7 +9601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
---- !u!1001 &4507844998753694908
+--- !u!1001 &949718681844136658
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9612,11 +9612,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pfb_grp_recipe_preview
-      objectReference: {fileID: 0}
-    - target: {fileID: 3298954136367682256, guid: 10022b304dcc35540ad8b46ac371f138,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7907280986238364845, guid: 10022b304dcc35540ad8b46ac371f138,
         type: 3}
@@ -9725,9 +9720,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10022b304dcc35540ad8b46ac371f138, type: 3}
---- !u!224 &5995235640869656593 stripped
+--- !u!224 &6958723546783618687 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7907280986238364845, guid: 10022b304dcc35540ad8b46ac371f138,
     type: 3}
-  m_PrefabInstance: {fileID: 4507844998753694908}
+  m_PrefabInstance: {fileID: 949718681844136658}
   m_PrefabAsset: {fileID: 0}
