@@ -1021,10 +1021,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4377487519701038592}
-  - {fileID: 7745108635835252629}
-  - {fileID: 4718922200155140973}
-  - {fileID: 689215034071978733}
+  - {fileID: 165918046787252431}
+  - {fileID: 6165048995190012250}
+  - {fileID: 9191418701454996898}
+  - {fileID: 3990775629846991906}
   m_Father: {fileID: 1657812713457386159}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1302,7 +1302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d88c29c5f47e43eea579dee2aa353d6, type: 3}
---- !u!224 &689215034071978733 stripped
+--- !u!224 &3990775629846991906 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4535828655764981643, guid: 6d88c29c5f47e43eea579dee2aa353d6,
     type: 3}
@@ -1502,7 +1502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d88c29c5f47e43eea579dee2aa353d6, type: 3}
---- !u!224 &4377487519701038592 stripped
+--- !u!224 &165918046787252431 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4535828655764981643, guid: 6d88c29c5f47e43eea579dee2aa353d6,
     type: 3}
@@ -1702,7 +1702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d88c29c5f47e43eea579dee2aa353d6, type: 3}
---- !u!224 &4718922200155140973 stripped
+--- !u!224 &9191418701454996898 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4535828655764981643, guid: 6d88c29c5f47e43eea579dee2aa353d6,
     type: 3}
@@ -1902,7 +1902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d88c29c5f47e43eea579dee2aa353d6, type: 3}
---- !u!224 &7745108635835252629 stripped
+--- !u!224 &6165048995190012250 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4535828655764981643, guid: 6d88c29c5f47e43eea579dee2aa353d6,
     type: 3}

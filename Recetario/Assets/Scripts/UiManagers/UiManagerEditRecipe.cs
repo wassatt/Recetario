@@ -227,8 +227,7 @@ public class UiManagerEditRecipe : MonoBehaviour
 
         StartCoroutine(dbManager.endpointsTools.PatchWithParam(API.urlUpdateRecipe, recipe.id, json, returnValue =>
         {
-            Debug.Log(returnValue);
-            //ReloadPanelValues();
+            //Debug.Log(returnValue);
             onBackToMyRecipes.Invoke();
         }));
     }

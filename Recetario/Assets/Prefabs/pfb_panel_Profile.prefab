@@ -1907,8 +1907,9 @@ GameObject:
   - component: {fileID: 263774831847048999}
   - component: {fileID: 263774831847048992}
   - component: {fileID: 263774831847048993}
+  - component: {fileID: 822630354848535003}
   m_Layer: 5
-  m_Name: btn_continue (1)
+  m_Name: btn_editImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,7 +2013,48 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 263774831847048992}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: PickImage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 822630354848535003}
+          m_ObjectArgumentAssemblyTypeName: ImageUpdater, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &822630354848535003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263774831847048995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec54b6b67b3f09449848517e7aeb6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 4948868228709664935}
+  imagePath: {fileID: 11400000, guid: 8be59bda534c61041b20bb0eca3eff31, type: 2}
+  imgName: 
+  onImageUpdated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5707955688002654861}
+        m_MethodName: UpdatePromoImage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8be59bda534c61041b20bb0eca3eff31,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: ScriptableString, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &263774831885336574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,6 +2340,20 @@ MonoBehaviour:
     url: 
   imgPromo: {fileID: 4948868228709664935}
   ifUrl: {fileID: 4948868229940270034}
+  onBackToPromos:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: TurnOnSubPanel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Profile,AdminPromo
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &564793435427529256
 GameObject:
   m_ObjectHideFlags: 0
@@ -11176,10 +11232,10 @@ RectTransform:
   m_Father: {fileID: 4948868230334717292}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0024872, y: -0.00059509}
-  m_SizeDelta: {x: 679, y: 292.84}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0025024414, y: -0.0005950928}
+  m_SizeDelta: {x: -1, y: 0.83999634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4948868228709664932
 CanvasRenderer:
@@ -11207,9 +11263,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ff3a3b6f1cbcdfb47abf45c22b01f803, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cfae577c15bacc48b803f26bb24738b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -14026,7 +14082,7 @@ GameObject:
   - component: {fileID: 4948868229855150046}
   - component: {fileID: 4948868229855150041}
   m_Layer: 5
-  m_Name: btn_add
+  m_Name: btn_Accept
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14130,7 +14186,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4948868229855150046}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5707955688002654861}
+        m_MethodName: UpdatePromo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4948868229861572447
 GameObject:
   m_ObjectHideFlags: 0
@@ -15429,7 +15496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Agregar
+  m_Text: Aceptar
 --- !u!1 &4948868230311887455
 GameObject:
   m_ObjectHideFlags: 0
@@ -15714,7 +15781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 0
+  m_ShowMaskGraphic: 1
 --- !u!114 &4948868230334717293
 MonoBehaviour:
   m_ObjectHideFlags: 0
