@@ -35,6 +35,11 @@ public class SharingManager : MonoBehaviour
         StartCoroutine(CoroutineShareLink(link));
     }
 
+    public void ShareText(string subject, string text)
+    {
+        StartCoroutine(CoroutineShareText(subject, text));
+    }
+
     private IEnumerator CoroutineShareLink(string link)
     {
         yield return new WaitForEndOfFrame();
@@ -47,5 +52,15 @@ public class SharingManager : MonoBehaviour
         // Share on WhatsApp only, if installed (Android only)
         //if( NativeShare.TargetExists( "com.whatsapp" ) )
         //	new NativeShare().AddFile( filePath ).AddTarget( "com.whatsapp" ).Share();
+    }
+
+    private IEnumerator CoroutineShareText(string subject, string text)
+    {
+        yield return new WaitForEndOfFrame();
+
+        new NativeShare()
+            .SetSubject(subject).SetText(text)
+            .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
+            .Share();
     }
 }

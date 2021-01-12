@@ -1503,12 +1503,14 @@ MonoBehaviour:
     listIngredients: []
     listInstructions: []
   dbManager: {fileID: 0}
+  sharingManager: {fileID: 0}
   imgDish: {fileID: 4674144708330406564}
   imgDifficulty: {fileID: 557138384856615314}
   btnLike: {fileID: 5683800153484112092}
   txtLikes: {fileID: 3028970060795269221}
   btnFavorite: {fileID: 3133707889955035658}
   imgIsFavorite: {fileID: 7029804232108796208}
+  btnShare: {fileID: 1715262647371058226}
   txtName: {fileID: 4674144707927043953}
   txtPrepTime: {fileID: 557138384332193172}
   txtDescription: {fileID: 4674144707510568051}

@@ -8,6 +8,7 @@ public class UiManagerFullRecipe : MonoBehaviour
 {
     public Recipe recipe;
     public DataBaseManager dbManager;
+    public SharingManager sharingManager;
 
     [SerializeField]
     private Image imgDish;
@@ -21,6 +22,8 @@ public class UiManagerFullRecipe : MonoBehaviour
     private Button btnFavorite;
     [SerializeField]
     private GameObject imgIsFavorite;
+    [SerializeField]
+    private Button btnShare;
     [SerializeField]
     private Text txtName;
     [SerializeField]
@@ -128,6 +131,10 @@ public class UiManagerFullRecipe : MonoBehaviour
                 GetLikes();
             }));
         });
+
+        btnShare.onClick.AddListener(delegate {
+            Share();
+        });
     }
 
     private void GetLikes()
@@ -226,6 +233,31 @@ public class UiManagerFullRecipe : MonoBehaviour
         //        InstantiateInstructions();
         //    }));
         //});
+    }
+
+    public void Share()
+    {
+        string sRecipe = recipe.name;
+        sRecipe += "\nIngredientes";
+
+        for (int i = 0; i < recipe.listIngredients.Count; i++)
+        {
+            if(recipe.listIngredients[i].qty.Equals("grp"))
+                sRecipe += $"\n{recipe.listIngredients[i].name}";
+            else
+                sRecipe += $"\n-{recipe.listIngredients[i].qty} {recipe.listIngredients[i].name}";
+        }
+
+        sRecipe += "\nInstrucciones";
+
+        for (int i = 0; i < recipe.listInstructions.Count; i++)
+        {
+            sRecipe += $"\n{i + 1}-{recipe.listInstructions[i].text}";
+        }
+
+        //sRecipe += urlApp;
+        //Debug.Log(sRecipe);
+        sharingManager.ShareText(recipe.name, sRecipe);
     }
 
     public void ToggleFavorite()
