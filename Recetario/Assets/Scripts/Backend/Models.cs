@@ -99,3 +99,21 @@ public enum CATEGORIES
     CANDIES,
     COOKIES
 }
+
+[Serializable]
+public class PersistantRecipe
+{
+    public string id;
+    public List<PersistantInstruction> listInstructions;
+
+    public PersistantRecipe() { listInstructions = new List<PersistantInstruction>(); }
+}
+
+[Serializable]
+public class PersistantInstruction
+{
+    public string id;
+    public bool toggleIsOn;
+
+    public PersistantInstruction() { }
+}

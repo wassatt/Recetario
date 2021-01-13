@@ -1,6 +1,7 @@
 ﻿using SimpleJSON;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class UiManagerFullRecipe : MonoBehaviour
     public Recipe recipe;
     public DataBaseManager dbManager;
     public SharingManager sharingManager;
+    public ScriptableInstructions scriptableInstructions;
 
     [SerializeField]
     private Image imgDish;
@@ -64,10 +66,11 @@ public class UiManagerFullRecipe : MonoBehaviour
 
     private void OnEnable()
     {
+        AddToPersistentData();
         InitUiValues(recipe);
         StartCoroutine(FixContentSize());
-        //InstantiateIngredients();
-        //InstantiateInstructions();
+        InstantiateIngredients();
+        InstantiateInstructions();//TODO: Set Toggle value with scriptableInstructions
     }
 
     public void InitUiValues(Recipe recipe)
@@ -233,6 +236,25 @@ public class UiManagerFullRecipe : MonoBehaviour
         //        InstantiateInstructions();
         //    }));
         //});
+    }
+
+    public void AddToPersistentData()
+    {
+        if (!scriptableInstructions.persistantRecipes.Any(item => item.id == recipe.id))
+        {
+            PersistantRecipe persistantRecipe = new PersistantRecipe();
+            persistantRecipe.id = recipe.id;
+
+            foreach (Instruction item in recipe.listInstructions)
+            {
+                PersistantInstruction persistantInstruction = new PersistantInstruction();
+                persistantInstruction.id = item.id;
+                persistantInstruction.toggleIsOn = false;
+                persistantRecipe.listInstructions.Add(persistantInstruction);
+            }
+
+            scriptableInstructions.persistantRecipes.Add(persistantRecipe);
+        }
     }
 
     public void Share()

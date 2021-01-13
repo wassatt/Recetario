@@ -182,8 +182,8 @@ public class RecipesContentManager : MonoBehaviour
         obj.transform.Find("btn_OpenRecipe").GetComponent<Button>().onClick.AddListener(delegate {
             fullRecipe.recipe = recipeData.recipe;
             fullRecipe.dbManager = dbManager;
-            fullRecipe.InstantiateIngredients();
-            fullRecipe.InstantiateInstructions();
+            //fullRecipe.InstantiateIngredients();
+            //fullRecipe.InstantiateInstructions();
 
             onOpenFullRecipe.Invoke();
         });

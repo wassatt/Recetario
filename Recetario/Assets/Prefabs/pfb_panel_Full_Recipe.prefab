@@ -1504,6 +1504,8 @@ MonoBehaviour:
     listInstructions: []
   dbManager: {fileID: 0}
   sharingManager: {fileID: 0}
+  scriptableInstructions: {fileID: 11400000, guid: af7a0cce29cfcac4f90e0920bc76d2c1,
+    type: 2}
   imgDish: {fileID: 4674144708330406564}
   imgDifficulty: {fileID: 557138384856615314}
   btnLike: {fileID: 5683800153484112092}

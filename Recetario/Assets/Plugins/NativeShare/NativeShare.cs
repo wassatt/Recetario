@@ -177,7 +177,7 @@ public class NativeShare
 		}
 
 #if UNITY_EDITOR
-		Debug.Log( "Shared!" );
+		//Debug.Log( "Shared!" );
 
 		if( callback != null )
 			callback( ShareResult.Shared, null );
