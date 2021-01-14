@@ -25,6 +25,7 @@ public class AuthManager : MonoBehaviour
     public UnityEvent onLogInFailed;
     public UnityEvent onSingInSuccess;
     public UnityEvent onSingInFailed;
+    public UnityEvent onUserNotLoggedPrev;
     //public UnityEvent onDataUpdated;
 
     public static string currentUserId;
@@ -61,6 +62,10 @@ public class AuthManager : MonoBehaviour
 
             dbManager.GetUserData(true);
             onUserLoggedPrev.Invoke();
+        }
+        else
+        {
+            onUserNotLoggedPrev.Invoke();
         }
     }
 

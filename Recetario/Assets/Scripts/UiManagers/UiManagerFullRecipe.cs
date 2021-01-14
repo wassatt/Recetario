@@ -226,16 +226,13 @@ public class UiManagerFullRecipe : MonoBehaviour
 
         Text txtText = obj.GetComponent<Text>();
         txtText.text = instruction.text;
+        Toggle tgl_Done = obj.transform.Find("tgl_Done").GetComponent<Toggle>();
 
-        //obj.transform.Find("tgl_Done").GetComponent<Toggle>().onValueChanged.AddListener(delegate
-        //{
-        //    //Debug.Log($"{recipe.id}/{instruction.id}");
-        //    StartCoroutine(dbManager.endpointsTools.DeleteWithParam(API.urlDeleteInstruction, $"{recipe.id}/{instruction.id}", returnValue =>
-        //    {
-        //        //Debug.Log(returnValue);
-        //        InstantiateInstructions();
-        //    }));
-        //});
+        tgl_Done.isOn = scriptableInstructions.persistantRecipes.Find(pr => pr.id == recipe.id).listInstructions.Find(pi => pi.id == instruction.id).toggleIsOn;
+
+        tgl_Done.onValueChanged.AddListener(delegate {
+            scriptableInstructions.persistantRecipes.Find(pr => pr.id == recipe.id).listInstructions.Find(pi => pi.id == instruction.id).toggleIsOn = tgl_Done.isOn;
+        });
     }
 
     public void AddToPersistentData()
