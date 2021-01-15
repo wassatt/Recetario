@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 434099134785100034}
   - component: {fileID: 434099134785100035}
   - component: {fileID: 1794328570}
-  - component: {fileID: 173666938507317969}
   - component: {fileID: 1724233200}
   m_Layer: 0
   m_Name: pfb_AppManager
@@ -124,21 +123,6 @@ MonoBehaviour:
   btnAcceptName: {fileID: 0}
   btnAcceptMail: {fileID: 0}
   btnAcceptPass: {fileID: 0}
---- !u!114 &173666938507317969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434099134785100033}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c06a2ba3321214ee987d6dfe36636a78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contentObj: {fileID: 0}
-  pfb_grp_ingredient: {fileID: 2559336496892424607, guid: 6d88c29c5f47e43eea579dee2aa353d6,
-    type: 3}
 --- !u!114 &1724233200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +140,32 @@ MonoBehaviour:
   contentRecipesObj: {fileID: 0}
   pfb_grp_recipe_preview: {fileID: 3298954136367682256, guid: 10022b304dcc35540ad8b46ac371f138,
     type: 3}
+  fullRecipe: {fileID: 0}
+  onOpenFullRecipe:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: TurnOnPanel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FullRecipe
+          m_BoolArgument: 0
+        m_CallState: 2
+  onSearchDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: TurnOnSubPanel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Recipes,Main
+          m_BoolArgument: 0
+        m_CallState: 2

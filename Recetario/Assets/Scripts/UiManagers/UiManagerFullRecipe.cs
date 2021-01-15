@@ -70,7 +70,7 @@ public class UiManagerFullRecipe : MonoBehaviour
         InitUiValues(recipe);
         StartCoroutine(FixContentSize());
         InstantiateIngredients();
-        InstantiateInstructions();//TODO: Set Toggle value with scriptableInstructions
+        InstantiateInstructions();
     }
 
     public void InitUiValues(Recipe recipe)
