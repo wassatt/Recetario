@@ -35,7 +35,6 @@ public class UiManagerEditRecipe : MonoBehaviour
 
     public UnityEvent onBackToMyRecipes;
 
-    // Start is called before the first frame update
     void OnEnable()
     {
         ReloadPanelValues();

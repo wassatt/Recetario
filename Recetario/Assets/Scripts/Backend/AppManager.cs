@@ -15,7 +15,6 @@ public class AppManager : MonoBehaviour
     
     void Start()
     {
-        //TODO: endpoint isAlle;
         InitApp();
     }
 
