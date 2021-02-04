@@ -1795,29 +1795,25 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Pasteles
+    - m_Text: Aderazos y Salsas
       m_Image: {fileID: 0}
-    - m_Text: "Panqu\xE9s"
+    - m_Text: Arroces
       m_Image: {fileID: 0}
-    - m_Text: Tartas
+    - m_Text: Carnes
       m_Image: {fileID: 0}
-    - m_Text: Pies
+    - m_Text: Ensaladas
       m_Image: {fileID: 0}
-    - m_Text: Gelatinas
+    - m_Text: Pescados
       m_Image: {fileID: 0}
-    - m_Text: Mousse
+    - m_Text: Pollos
       m_Image: {fileID: 0}
-    - m_Text: Betunes
+    - m_Text: Postres
       m_Image: {fileID: 0}
-    - m_Text: Flan
+    - m_Text: Sopas
       m_Image: {fileID: 0}
-    - m_Text: Salsas
+    - m_Text: Vegetales y Guarniciones
       m_Image: {fileID: 0}
-    - m_Text: Pan
-      m_Image: {fileID: 0}
-    - m_Text: Dulces
-      m_Image: {fileID: 0}
-    - m_Text: Galletas
+    - m_Text: Masas, Panes y Otros
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

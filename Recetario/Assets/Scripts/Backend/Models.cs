@@ -67,9 +67,9 @@ public class Promo
 public static class Categories
 {
     static string[] categories = new string[] 
-        { "Pasteles", "Panqués", "Tartas", "Pies",
-           "Gelatinas", "Mousse","Betunes","Flan",
-           "Salsas", "Pan", "Dulces", "Galletas" };
+        { "Aderazos y Salsas", "Arroces", "Carnes", "Ensaladas",
+           "Pescados", "Pollos","Postres","Sopas",
+           "Vegetales y Guarniciones", "Masas, Panes y Otros", "Dulces", "Galletas" };
 
     public static string GetCategoryString(int category)
     {
