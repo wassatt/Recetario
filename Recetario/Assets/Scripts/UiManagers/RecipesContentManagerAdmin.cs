@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using SimpleJSON;
 using UnityEngine.Events;
+using System.Collections;
 
 public class RecipesContentManagerAdmin : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class RecipesContentManagerAdmin : MonoBehaviour
     private GameObject pfb_grp_recipe_preview;
     [SerializeField]
     private UiManagerEditRecipe editPanel;
+    [SerializeField]
+    private ScrollRect scrollRect;
 
 
     public UnityEvent onEditRecipe;
@@ -28,6 +31,7 @@ public class RecipesContentManagerAdmin : MonoBehaviour
         {
             //Debug.Log(returnValue);
             GetRecipes();
+            StartCoroutine(CoroutineScrollToNormalizedPos(0f, .4f));
         }));
     }
 
@@ -102,5 +106,20 @@ public class RecipesContentManagerAdmin : MonoBehaviour
                 GetRecipes();
             }));
         });
+    }
+
+    IEnumerator CoroutineScrollToNormalizedPos(float endValue, float duration)
+    {
+        yield return new WaitForSeconds(1.5f);
+        float time = 0;
+        float startValue = scrollRect.verticalNormalizedPosition;
+
+        while (time < duration)
+        {
+            scrollRect.verticalNormalizedPosition = Mathf.Lerp(startValue, endValue, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        scrollRect.verticalNormalizedPosition = endValue;
     }
 }
