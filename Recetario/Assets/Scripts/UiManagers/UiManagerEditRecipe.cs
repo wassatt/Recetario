@@ -1,5 +1,6 @@
 ﻿using SimpleJSON;
 using System.Collections;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -194,7 +195,11 @@ public class UiManagerEditRecipe : MonoBehaviour
 
         ifText.onEndEdit.AddListener(delegate
         {
-            string json = "{\"text\" : \"" + ifText.text + "\"}";
+            string cleanText = Regex.Replace(ifText.text, @"\n", "\\n");
+            cleanText = Regex.Replace(cleanText, @"\r", "\\r");
+
+            string json = "{\"text\" : \"" + cleanText + "\"}";
+
             //Debug.Log($"{recipe.id}/{instruction.id}");
             StartCoroutine(dbManager.endpointsTools.PatchWithParam(API.urlUpdateInstruction, $"{recipe.id}/{instruction.id}", json, returnValue =>
             {

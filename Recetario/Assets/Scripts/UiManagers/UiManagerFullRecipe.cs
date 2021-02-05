@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UiManagerFullRecipe : MonoBehaviour
@@ -26,11 +27,15 @@ public class UiManagerFullRecipe : MonoBehaviour
     [SerializeField]
     private Button btnShare;
     [SerializeField]
+    private Button btnEdit;
+    [SerializeField]
     private Text txtName;
     [SerializeField]
     private Text txtPrepTime;
     [SerializeField]
     private Text txtDescription;
+    [SerializeField]
+    private UiManagerEditRecipe editPanel;
 
 
     [SerializeField]
@@ -48,6 +53,8 @@ public class UiManagerFullRecipe : MonoBehaviour
 
     [SerializeField]
     private VerticalLayoutGroup layoutGroup;
+
+    public UnityEvent onEditRecipe;
 
     string[] hoursOptions = new string[] { "", "1 hr", "2 hr",
         "3 hr", "4 hr", "5 hr"};
@@ -137,6 +144,18 @@ public class UiManagerFullRecipe : MonoBehaviour
         btnShare.onClick.AddListener(delegate {
             Share();
         });
+
+        btnEdit.onClick.AddListener(delegate {
+            OpenEditPanel();
+        });
+    }
+
+    private void OpenEditPanel()
+    {
+        editPanel.recipe = recipe;
+        editPanel.dbManager = dbManager;
+        //open menu editor
+        onEditRecipe.Invoke();
     }
 
     private void GetLikes()
