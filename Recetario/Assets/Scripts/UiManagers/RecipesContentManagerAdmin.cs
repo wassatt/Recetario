@@ -31,7 +31,7 @@ public class RecipesContentManagerAdmin : MonoBehaviour
         {
             //Debug.Log(returnValue);
             GetRecipes();
-            StartCoroutine(CoroutineScrollToNormalizedPos(0f, .4f));
+            StartCoroutine(CoroutineScrollToNormalizedPos(0f, .4f, true));
         }));
     }
 
@@ -82,6 +82,11 @@ public class RecipesContentManagerAdmin : MonoBehaviour
         }));
     }
 
+    public void ScrollToBottom()
+    {
+        StartCoroutine(CoroutineScrollToNormalizedPos(0f, .4f, false));
+    }
+
     private void InstantiateRecipePreview(Recipe recipe)
     {
         GameObject obj = Instantiate(pfb_grp_recipe_preview, contentRecipesObj.transform);
@@ -108,9 +113,11 @@ public class RecipesContentManagerAdmin : MonoBehaviour
         });
     }
 
-    IEnumerator CoroutineScrollToNormalizedPos(float endValue, float duration)
+    IEnumerator CoroutineScrollToNormalizedPos(float endValue, float duration, bool wait)
     {
-        yield return new WaitForSeconds(1.5f);
+        if(wait)
+            yield return new WaitForSeconds(1.5f);
+
         float time = 0;
         float startValue = scrollRect.verticalNormalizedPosition;
 
