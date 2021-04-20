@@ -20,17 +20,20 @@ public class AppManager : MonoBehaviour
 
     public void InitApp()
     {
+        StartCoroutine(dbManager.endpointsTools.GetWithParam(API.urlIsAdmin, AuthManager.currentUserMail, "", callback => {
+            isAlle = bool.Parse(callback);
 
-        if (isAlle)
-        {
+            if (isAlle)
+            {
 
-            onLoadAllesMode.Invoke();
-        }
-        else
-        {
+                onLoadAllesMode.Invoke();
+            }
+            else
+            {
 
-            onLoadGuestMode.Invoke();
-        }
+                onLoadGuestMode.Invoke();
+            }
+        }));
     }
 
 }

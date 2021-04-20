@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dbManager: {fileID: 0}
-  isAlle: 1
+  isAlle: 0
   onLoadAllesMode:
     m_PersistentCalls:
       m_Calls:
