@@ -198,6 +198,24 @@ public class AuthManager : MonoBehaviour
         }
     }
 
+    public IEnumerator SendResetPasswordEmail(string email, System.Action<string> callback)
+    {
+        var auth = FirebaseAuth.DefaultInstance;
+        var sendResetPassTask = auth.SendPasswordResetEmailAsync(email);
+        yield return new WaitUntil(() => sendResetPassTask.IsCompleted);
+
+        if (sendResetPassTask.Exception != null)
+        {
+            //Debug.LogError(sendResetPassTask.Exception);
+            yield return null;
+            callback(sendResetPassTask.Exception.ToString());
+        }
+        else
+        {
+            callback("Reset password email sent");
+        }
+    }
+
     public void LoginUser()
     {
         StartCoroutine(LoginCoroutine(loginMail.Get(), loginPass.Get()));

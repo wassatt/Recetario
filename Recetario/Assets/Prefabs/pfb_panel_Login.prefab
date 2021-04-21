@@ -371,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &691970086794389655
 RectTransform:
   m_ObjectHideFlags: 0
@@ -453,11 +453,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d36978b69fc2b842999937c3041deea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  authManager: {fileID: 0}
   userMail: {fileID: 8653506335718491023}
   userPassword: {fileID: 8653506337040590191}
   loginMail: {fileID: 11400000, guid: bf2562396a36ce245ae1796528144e25, type: 2}
   loginPass: {fileID: 11400000, guid: 4172d60efa55d774dae8feac96bc3f4c, type: 2}
   loginButton: {fileID: 691970086291794992}
+  userMailRecover: {fileID: 6984821102387814944}
+  btnSendMailRecover: {fileID: 6984821102349555614}
+  onPassResetEmailSent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6984821103043863071}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: _ShowMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "Te hemos enviado un correo de recuperaci\xF3n."
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &792848325566166593
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +954,7 @@ RectTransform:
   m_AnchorMin: {x: 0.0005036942, y: 0.4727846}
   m_AnchorMax: {x: 0.9999991, y: 0.5831947}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.14288928}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6606043472467157775
 CanvasRenderer:
@@ -1246,7 +1274,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 6984821102349555615}
   m_OnClick:
     m_PersistentCalls:
@@ -1371,13 +1399,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6984821102387814945}
   m_TextComponent: {fileID: 6984821102565330812}
   m_Placeholder: {fileID: 6984821103237433453}
-  m_ContentType: 0
+  m_ContentType: 6
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 7
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 5
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -2355,7 +2383,7 @@ RectTransform:
   m_AnchorMin: {x: 0.0005036942, y: 0.47953004}
   m_AnchorMax: {x: 0.9999991, y: 0.5072117}
   m_AnchoredPosition: {x: 0, y: -18}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 1.8267616}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7414279684283929721
 CanvasRenderer:
@@ -3026,7 +3054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.00053183705, y: 0.4999963}
   m_AnchorMax: {x: 0.99946743, y: 1.0005027}
-  m_AnchoredPosition: {x: -2.1000977, y: 0.49987793}
+  m_AnchoredPosition: {x: -2.1000366, y: 0.49987793}
   m_SizeDelta: {x: 4.21, y: -1.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8653506336750174065
