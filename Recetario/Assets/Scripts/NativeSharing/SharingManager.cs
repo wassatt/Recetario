@@ -39,6 +39,11 @@ public class SharingManager : MonoBehaviour
         StartCoroutine(CoroutineShareText(subject, text));
     }
 
+    public void OpenUrl(string url)
+    {
+        Application.OpenURL(url);
+    }
+
     private IEnumerator CoroutineShareLink(string link)
     {
         yield return new WaitForEndOfFrame();

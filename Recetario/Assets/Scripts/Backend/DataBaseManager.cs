@@ -56,7 +56,7 @@ public class DataBaseManager : MonoBehaviour
     {
         string userId = AuthManager.currentUserId;
 
-        UserData userData = new UserData();
+        UserData userData = sUserData.Get();
         userData.name = userName;
         string json = JsonUtility.ToJson(userData);
 
